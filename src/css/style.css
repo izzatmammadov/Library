@@ -1,27 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&family=Roboto:ital,wght@0,100;0,400;0,700;1,500&display=swap");
-
-:root {
-  --mainColorDarkRed: #391f00;
-  --mainColorRed: #720418;
-  --mainColorOrange: #e16a00;
-  --mainColorPurple: #9b51e0;
-  --mainColorText: #241400;
-  --mainBorderColor: #e6e7e9c2;
-  --fontRoboto: "Roboto", sans-serif;
-  --fontMons: "Montserrat", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  outline: none !important;
-  text-decoration: none;
-  list-style: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 
 .navbar {
   display: flex;
@@ -41,12 +17,12 @@
 
 .logo_title h1 {
   color: var(--, #720418);
-font-family: var(--fontMons);
-font-size: 14px;
-font-style: normal;
-font-weight: 900;
-line-height: normal;
-margin: 0px;
+  font-family: var(--fontMons);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin: 0px;
 }
 
 .logo_title hr {
@@ -57,9 +33,16 @@ margin: 0px;
 
 .logo_title p {
   color: var(--, #241400);
-font-family: var(--fontMons);
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-margin: 0px;
+  font-family: var(--fontMons);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0px;
 }
+
+.list_div {
+
+}
+
+.nav_items{}
+
