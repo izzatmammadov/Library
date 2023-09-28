@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Reset CSS -->
-    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/reset.css" />
     <!-- Root CSS -->
-    <link rel="stylesheet" href="./src/css/root.css">
+    <link rel="stylesheet" href="./src/css/root.css" />
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -19,20 +19,49 @@
     <title>Library | Bookstore</title>
   </head>
   <body>
+    <!-- modal for pc-->
+    <section class="join_us_section" id="joinUsModal">
+      <div class="modal_content">
+        <span class="close_join_us">&times;</span>
+        <div class="modal_inner_div">
+          <p>Join Us</p>
+          <input type="text" placeholder="Fullname" />
+          <input type="email" placeholder="E-mail" />
+          <p id="modalErrorMessage">Fill in the fields corectly!</p>
+          <button>Join</button>
+        </div>
+      </div>
+    </section>
 
-    <nav class="navbar">
+    <!-- modal for responsive -->
+    <section class="modal_for_responsive" id="responsiveModal">
+      <div class="responsive_modal_content">
+        <span class="close" id="closeResponsiveModal">&times;</span>
+        <ul class="responsive_modal_ul">
+          <li class="nav_active_li">Home</li>
+          <li>Catalog</li>
+          <li>About Store</li>
+          <li>Contact Us</li>
+          <li>Search</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- header -->
+
+    <header class="navbar">
       <div class="logo_div">
-        <img src="./src/./assets/photos/logo_red.svg" alt="logo">
+        <img src="./src/./assets/photos/logo_red.svg" alt="logo" />
         <div class="logo_title">
           <h1>LIBRARY</h1>
-          <hr>
+          <hr />
           <p>book store</p>
         </div>
       </div>
 
       <div class="list_div">
         <ul class="nav_items">
-          <li><a href="">Home</a></li>
+          <li><a href="./index.html" class="nav_active_a">Home</a></li>
           <li><a href="">Catalog</a></li>
           <li><a href="">About Store</a></li>
           <li><a href="">Contact Us</a></li>
@@ -41,23 +70,155 @@
       </div>
 
       <div class="join_div">
-        <img src="./src/./assets/icons/personal_icon.svg" alt="personal_icon">
-        <button>Join Us</button>
+        <img
+          id="joinUsIcon"
+          src="./src/./assets/icons/personal_icon.svg"
+          alt="personal_icon"
+        />
+        <button id="joinUsBtn">Join Us</button>
+        <button id="hamburgerMenu">
+          <img src="./src/assets/icons/hamburger_menu.png" alt="hamburger" />
+        </button>
       </div>
-    </nav>
-    <header></header>
+    </header>
 
+    <!-- main -->
 
+    <main class="main">
+      <section class="header_section">
+        <div class="header_about_div">
+          <h1>Books from A to Z</h1>
+          <p>
+            In our store you can find a book for every taste. A large
+            assortment. Nice prices. Interesting stories.
+          </p>
+          <button>Go to Catalog</button>
+        </div>
+        <div class="header_books_div">
+          <img src="./src/assets/photos/books_red_bg.svg" alt="books_red_bg" />
+        </div>
+      </section>
 
-    <main></main>
+      <section class="catalog_section">
+        <h2 class="catalog_title">Catalog</h2>
+        <div class="catalog_items">
+          <button>Books</button>
+          <button>Electronic books</button>
+          <button>Audiobooks</button>
+          <button>Toys & Creativity</button>
+          <button>Books accessories</button>
+          <button>Notepads</button>
+          <button>Board games</button>
+          <button>Present</button>
+          <button>Stock</button>
+        </div>
+      </section>
 
+      <section class="about_store_section">
+        <h3 class="about_store_title">About Store</h3>
 
+        <div class="about_store_indicators">
+          <div class="indicators_inner_div">
+            <p>35</p>
+            <span>Branches the country</span>
+          </div>
+          <div class="indicators_inner_div">
+            <p>898</p>
+            <span>Products catalog</span>
+          </div>
+          <div class="indicators_inner_div">
+            <p>88659</p>
+            <span>Buyers</span>
+          </div>
+          <div class="indicators_inner_div">
+            <p>72</p>
+            <span>Hours delivery to cities</span>
+          </div>
+        </div>
+      </section>
 
+      <section class="delivery_section">
+        <h4>Delivery</h4>
+        <p>
+          We work without holidays and weekends! Residents of Kiev can receive
+          an order on the day of its registration. Customers from other cities
+          of Ukraine can receive an order within 1-5 days, depending on the
+          location of the settlement and the selected delivery method. Orders
+          over UAH 1000 are delivered free of charge *. You can see the
+          available methods, exact terms and cost of delivery during checkout in
+          the order basket, aafter selecting the delivery city. More details
+        </p>
+      </section>
+    </main>
 
-    <footer></footer>
+    <!-- footer -->
 
+    <footer class="footer">
+      <section class="footer_icons_section">
+        <p>Follow us on social media</p>
+        <div class="footer_icons_div">
+          <img src="./src/assets/icons/facebookicon.svg" alt="facebookicon" />
+          <img src="./src/assets/icons/twettericon.svg" alt="twettericon" />
+          <img src="./src/assets/icons/instagramicon.svg" alt="instagramicon" />
+        </div>
+      </section>
+      <section class="footer_copywriter_section">
+        <div class="footer_logo_div">
+          <img src="./src/./assets/photos/logo.svg" alt="logo" />
+          <div class="footer_logo_title">
+            <h5>LIBRARY</h5>
+            <hr />
+            <h6>BOOK STORE</h6>
+          </div>
+        </div>
+        <!-- for responsive -->
+        <ul class="footer_nav_items">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="">Catalog</a></li>
+          <li><a href="">About Store</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Search</a></li>
+        </ul>
+        <!--  -->
+        <div class="footer_items_container">
+          <div class="footer_popular_items">
+            <ul>
+              <span class="footer_items_title">Popular</span>
+              <li>Programming</li>
+              <li>Books for children</li>
+              <li>Psychology</li>
+              <li>Business</li>
+            </ul>
+          </div>
 
+          <div class="footer_cash_items">
+            <ul>
+              <span class="footer_items_title">Cash</span>
+              <li>Delivery</li>
+              <li>Payment</li>
+              <li>About the store</li>
+            </ul>
+          </div>
 
+          <div class="footer_help_items">
+            <ul>
+              <span class="footer_items_title">Help</span>
+              <li>Contacts</li>
+              <li>Purchase returns</li>
+              <li>Buyer help</li>
+            </ul>
+          </div>
+
+          <div class="footer_contact_div">
+            <p>+994 50 123-45-67</p>
+            <button>Request a call</button>
+          </div>
+        </div>
+      </section>
+      <div class="copywriter_text">
+        All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
+      </div>
+    </footer>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
