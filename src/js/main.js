@@ -4,6 +4,9 @@ const joinUsIcon = document.querySelector("#joinUsIcon");
 const joinUsModal = document.querySelector("#joinUsModal");
 const responsiveModal = document.querySelector("#responsiveModal");
 const modalErrorMessage = document.querySelector("#modalErrorMessage");
+const joinUsFullname = document.querySelector("#joinUsFullname");
+const joinUsEmail = document.querySelector("#joinUsEmail");
+const join = document.querySelector("#join");
 const close_join_us = document.querySelector(".close_join_us");
 const close = document.querySelector(".close");
 
@@ -34,20 +37,39 @@ joinUsBtn.addEventListener("click", openJoinModal);
 hamburgerMenu.addEventListener("click", function () {
   responsiveModal.style.display = "block";
   setTimeout(function () {
-    responsiveModal.style.right = "0"; 
+    responsiveModal.style.right = "0";
     responsiveModal.style.opacity = "1";
   }, 10);
 });
 
 close.addEventListener("click", function () {
-  responsiveModal.style.right = "0"; 
-  responsiveModal.style.opacity = "0"; 
+  responsiveModal.style.right = "0";
+  responsiveModal.style.opacity = "0";
   setTimeout(function () {
     responsiveModal.style.display = "none";
   }, 300);
 });
 
 close_join_us.addEventListener("click", closeJoinModal);
+
+join.addEventListener("click", function () {
+  if (joinUsFullname.value == "" || joinUsEmail.value == "") {
+    modalErrorMessage.style.display = "block";
+    setTimeout(() => {
+      modalErrorMessage.style.display = "none";
+    }, 1500);
+    return;
+  }
+
+  const joinUser = {
+    fullname: joinUsFullname.value,
+    email: joinUsEmail.value,
+  };
+
+  joinUsFullname.value = "";
+  joinUsEmail.value = "";
+  console.log(joinUser); //for add firebase
+});
 
 window.addEventListener("click", function (e) {
   if (e.target == joinUsModal) {
