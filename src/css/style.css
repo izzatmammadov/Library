@@ -135,6 +135,11 @@ body {
   gap: 18px;
 }
 
+.responsive_modal_ul a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .responsive_modal_ul li:hover {
   color: #cecece;
   transition: all 0.3s;
