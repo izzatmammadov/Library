@@ -53,3 +53,7 @@ table {
   ::-webkit-scrollbar-thumb {
     background: #391f00;
   }
+
+  * {
+	box-sizing: border-box;
+  }
