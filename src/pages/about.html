@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Reset Css -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <!-- Root Css -->
+    <link rel="stylesheet" href="../css/root.css" />
+    <!-- Bootstrap Css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+     <!-- Footer css -->
+    <link rel="stylesheet" href="../css/footer.css">
+    <!-- Nav css -->
+    <link rel="stylesheet" href="../css/joinUs.css">
+    <!-- About Css -->
+    <link rel="stylesheet" href="../css/about.css" />
+    <title>About Store</title>
+  </head>
+  <body>
+    <section class="join_us_section" id="joinUsModal">
+      <div class="modal_content">
+        <span class="close_join_us">&times;</span>
+        <div class="modal_inner_div">
+          <p>Join Us</p>
+          <input id="joinUsFullname" type="text" placeholder="Fullname" />
+          <input id="joinUsEmail" type="email" placeholder="E-mail" />
+          <p id="modalErrorMessage">Fill in the fields corectly!</p>
+          <button id="join">Join</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- modal for responsive -->
+    <section class="modal_for_responsive" id="responsiveModal">
+      <div class="responsive_modal_content">
+        <span class="close" id="closeResponsiveModal">&times;</span>
+        <ul class="responsive_modal_ul">
+          <li ><a href="../../index.html">Home</a></li>
+          <li> <a href="./catalog.html">Catalog</a></li>
+          <li ><a class="nav_active_li" href="./about.html">About Store</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Search</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- header -->
+
+    <header class="navbar">
+      <div class="logo_div">
+        <img src="../assets/photos/logo_red.svg" alt="logo" />
+        <div class="logo_title">
+          <h1>LIBRARY</h1>
+          <hr />
+          <p>book store</p>
+        </div>
+      </div>
+
+      <div class="list_div">
+        <ul class="nav_items">
+          <li><a href="../../index.html" >Home</a></li>
+          <li><a href="./catalog.html">Catalog</a></li>
+          <li><a href="./about.html" class="nav_active_a">About Store</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Search</a></li>
+        </ul>
+      </div>
+
+      <div class="join_div">
+        <img
+          id="joinUsIcon"
+          src="../assets/icons/personal_icon.svg"
+          alt="personal_icon"
+        />
+        <button id="joinUsBtn">Join Us</button>
+        <button id="hamburgerMenu">
+          <img src="../assets/icons/hamburger_menu.png" alt="hamburger" />
+        </button>
+      </div>
+    </header>
+    <main class="w-100">
+        <!-- Section 1 -->
+      <section class="w-100 section-1 ">
+        <!-- Texts div -->
+        <div class="text-content">
+          <h1>About Store</h1>
+          <p>
+            We work without holidays and weekends! Residents of Kiev can receive
+            an order on the day of its registration. Customers from other cities
+            of Ukraine can receive an order within 1-5 days, depending on the
+            location of the settlement and the selected delivery method. Orders
+            over UAH 1000 are delivered free of charge *. You can see the
+            available methods, exact terms and cost of delivery during checkout
+            in the order basket, after selecting the delivery city.
+          </p>
+        </div>
+            <!-- Image div -->
+            <div class="img-content">
+                <img  class="img-fluid" src="../assets/photos/books.svg" alt="">
+            </div>
+      
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="footer_icons_section">
+        <p>Follow us on social media</p>
+        <div class="footer_icons_div">
+          <img src="../assets/icons/facebookicon.svg" alt="facebookicon" />
+          <img src="../assets/icons/twettericon.svg" alt="twettericon" />
+          <img src="../assets/icons/instagramicon.svg" alt="instagramicon" />
+        </div>
+      </section>
+      <section class="footer_copywriter_section">
+        <div class="footer_logo_div">
+          <img src="../assets/photos/logo.svg" alt="logo" />
+          <div class="footer_logo_title">
+            <h5>LIBRARY</h5>
+            <hr />
+            <h6>BOOK STORE</h6>
+          </div>
+        </div>
+        <!-- for responsive -->
+        <ul class="footer_nav_items">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="./catalog.html">Catalog</a></li>
+          <li><a href="./about.html">About Store</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Search</a></li>
+        </ul>
+        <!--  -->
+        <div class="footer_items_container">
+          <div class="footer_popular_items">
+            <ul>
+              <span class="footer_items_title">Popular</span>
+              <li>Programming</li>
+              <li>Books for children</li>
+              <li>Psychology</li>
+              <li>Business</li>
+            </ul>
+          </div>
+
+          <div class="footer_cash_items">
+            <ul>
+              <span class="footer_items_title">Cash</span>
+              <li>Delivery</li>
+              <li>Payment</li>
+              <li>About the store</li>
+            </ul>
+          </div>
+
+          <div class="footer_help_items">
+            <ul>
+              <span class="footer_items_title">Help</span>
+              <li>Contacts</li>
+              <li>Purchase returns</li>
+              <li>Buyer help</li>
+            </ul>
+          </div>
+
+          <div class="footer_contact_div">
+            <p>+994 50 123-45-67</p>
+            <a href="tel:+994501234567">Request a call</a>
+          </div>
+        </div>
+      </section>
+      <div class="copywriter_text">
+        All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
+      </div>
+    </footer>
+    <script src="../js/joinUs.js"></script>
+  </body>
+</html>

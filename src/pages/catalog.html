@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Reset Css -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <!-- Root Css -->
+    <link rel="stylesheet" href="../css/root.css" />
+
+    <!-- Slider Css Cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- Bootstrap Css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+      <!-- Footer css -->
+      <link rel="stylesheet" href="../css/footer.css">
+      <!-- Nav css -->
+      <link rel="stylesheet" href="../css/joinUs.css">
+    <!-- Catalog Css -->
+    <link rel="stylesheet" href="../css/catalog.css" />
+    <title>Catalog</title>
+  </head>
+  <body>
+    <section class="join_us_section" id="joinUsModal">
+      <div class="modal_content">
+        <span class="close_join_us">&times;</span>
+        <div class="modal_inner_div">
+          <p>Join Us</p>
+          <input id="joinUsFullname" type="text" placeholder="Fullname" />
+          <input id="joinUsEmail" type="email" placeholder="E-mail" />
+          <p id="modalErrorMessage">Fill in the fields corectly!</p>
+          <button id="join">Join</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- modal for responsive -->
+    <section class="modal_for_responsive" id="responsiveModal">
+      <div class="responsive_modal_content">
+        <span class="close" id="closeResponsiveModal">&times;</span>
+        <ul class="responsive_modal_ul">
+          <li ><a href="../../index.html">Home</a></li>
+          <li> <a class="nav_active_li" href="./catalog.html">Catalog</a></li>
+          <li ><a  href="./about.html">About Store</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Search</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- header -->
+
+    <header class="navbar">
+      <div class="logo_div">
+        <img src="../assets/photos/logo_red.svg" alt="logo" />
+        <div class="logo_title">
+          <h1>LIBRARY</h1>
+          <hr />
+          <p>book store</p>
+        </div>
+      </div>
+
+      <div class="list_div">
+        <ul class="nav_items">
+          <li><a href="../../index.html" >Home</a></li>
+          <li><a href="./catalog.html" class="nav_active_a">Catalog</a></li>
+          <li><a href="./about.html" >About Store</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Search</a></li>
+        </ul>
+      </div>
+
+      <div class="join_div">
+        <img
+          id="joinUsIcon"
+          src="../assets/icons/personal_icon.svg"
+          alt="personal_icon"
+        />
+        <button id="joinUsBtn">Join Us</button>
+        <button id="hamburgerMenu">
+          <img src="../assets/icons/hamburger_menu.png" alt="hamburger" />
+        </button>
+      </div>
+    </header>
+    <main class="w-100">
+      <!-- Section 1 -->
+      <section class="sections section-1 w-100">
+        <!-- Catagorie side of slider -->
+        <div class="text-side">
+          <h1>All Books</h1>
+          <div class="slider-catagories">
+            <button>All</button> <button>Fantastic</button>
+            <button>Self-development</button> <button>Baby</button>
+            <button>Classic</button>
+          </div>
+        </div>
+        <!-- Slider -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_1.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_2.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_3.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_4.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_5.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_1.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+      <!-- Section 2 -->
+      <section class="sections section-2 w-100">
+        <!-- Catagorie side of slider -->
+        <div>
+          <h1 class="w-100 text-center best-seller">Bestseller</h1>
+        </div>
+        <!-- Slider -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_1.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_2.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_3.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_4.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_5.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card">
+                <img src="../assets/photos/book_1.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+      <!-- Section 3 -->
+      <section class="sections section-3 w-100">
+        <!-- Catagorie side of slider -->
+        <div>
+          <h1 class="w-100 text-center new-releases">New releases</h1>
+        </div>
+        <div class="swiper w-100">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="slider-card new-book">
+                <img
+                  class="new-icon"
+                  src="../assets/icons/new-icon.svg"
+                  alt=""
+                />
+                <img src="../assets/photos/book_1.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card new-book">
+                <img
+                  class="new-icon"
+                  src="../assets/icons/new-icon.svg"
+                  alt=""
+                />
+                <img src="../assets/photos/book_2.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card new-book">
+                <img
+                  class="new-icon"
+                  src="../assets/icons/new-icon.svg"
+                  alt=""
+                />
+                <img src="../assets/photos/book_3.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card new-book">
+                <img
+                  class="new-icon"
+                  src="../assets/icons/new-icon.svg"
+                  alt=""
+                />
+                <img src="../assets/photos/book_4.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card new-book">
+                <img
+                  class="new-icon"
+                  src="../assets/icons/new-icon.svg"
+                  alt=""
+                />
+                <img src="../assets/photos/book_5.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-card new-book">
+                <img
+                  class="new-icon"
+                  src="../assets/icons/new-icon.svg"
+                  alt=""
+                />
+                <img src="../assets/photos/book_1.svg" alt="" />
+                <p>Order in Chaos</p>
+                <p>Konstantin Koptelov</p>
+                <button>Read more</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="footer_icons_section">
+        <p>Follow us on social media</p>
+        <div class="footer_icons_div">
+          <img src="../assets/icons/facebookicon.svg" alt="facebookicon" />
+          <img src="../assets/icons/twettericon.svg" alt="twettericon" />
+          <img src="../assets/icons/instagramicon.svg" alt="instagramicon" />
+        </div>
+      </section>
+      <section class="footer_copywriter_section">
+        <div class="footer_logo_div">
+          <img src="../assets/photos/logo.svg" alt="logo" />
+          <div class="footer_logo_title">
+            <h5>LIBRARY</h5>
+            <hr />
+            <h6>BOOK STORE</h6>
+          </div>
+        </div>
+        <!-- for responsive -->
+        <ul class="footer_nav_items">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="./catalog.html">Catalog</a></li>
+          <li><a href="./about.html">About Store</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Search</a></li>
+        </ul>
+        <!--  -->
+        <div class="footer_items_container">
+          <div class="footer_popular_items">
+            <ul>
+              <span class="footer_items_title">Popular</span>
+              <li>Programming</li>
+              <li>Books for children</li>
+              <li>Psychology</li>
+              <li>Business</li>
+            </ul>
+          </div>
+
+          <div class="footer_cash_items">
+            <ul>
+              <span class="footer_items_title">Cash</span>
+              <li>Delivery</li>
+              <li>Payment</li>
+              <li>About the store</li>
+            </ul>
+          </div>
+
+          <div class="footer_help_items">
+            <ul>
+              <span class="footer_items_title">Help</span>
+              <li>Contacts</li>
+              <li>Purchase returns</li>
+              <li>Buyer help</li>
+            </ul>
+          </div>
+
+          <div class="footer_contact_div">
+            <p>+994 50 123-45-67</p>
+            <a href="tel:+994501234567">Request a call</a>
+          </div>
+        </div>
+      </section>
+      <div class="copywriter_text">
+        All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
+      </div>
+    </footer>
+    <!-- Slider js Cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Catalog js -->
+    <script src="../js/catalog.js"></script>
+      <!-- Join us -->
+      <script src="../js/joinUs.js"></script>
+  </body>
+</html>
