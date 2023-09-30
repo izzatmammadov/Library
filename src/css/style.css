@@ -114,7 +114,7 @@ body {
   background: #241400bf;
   color: #fff;
   padding: 20px;
-  width: 65%;
+  width: 50%;
   height: 100%;
   text-align: center;
   position: fixed;
@@ -590,7 +590,7 @@ body {
   margin: auto;
 }
 
-.footer_contact_div button {
+.footer_contact_div a {
   background: none;
   border: 1px solid var(--mainColorOrange);
   color: var(--mainColorOrange);
@@ -598,10 +598,12 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 196.187%;
-  cursor: pointer;
+text-decoration: none;
+text-align: center;
+
 }
 
-.footer_contact_div button:hover {
+.footer_contact_div a:hover {
   color: #fff;
   background: var(--mainColorOrange);
   transition: all 0.3s;
@@ -769,7 +771,7 @@ body {
   }
 
   .catalog_items button {
-    padding: 24px 60px;
+    padding: 24px 58px;
     width: 100%;
   }
 
@@ -824,6 +826,10 @@ body {
     flex-direction: column;
     padding: 46px 10px;
     gap: 24px;
+  }
+
+  .responsive_modal_content {
+    width: 40%;
   }
 }
 
