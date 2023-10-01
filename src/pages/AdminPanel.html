@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/root.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../assets/photos/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/AdminPanel.css">
+    <title>Admin Panel</title>
+</head>
+
+<body>
+
+    <div class="First-login" style="display: none;">
+        <header>
+            <div id="header_admin_logo">
+
+                <img src="../assets/photos/logo-white.svg" alt="logo" width="282px">
+                <!-- <img src="./img/book-white-logo.svg" alt="logo">
+                <div class="logo-content">
+                    <h2>LIBRARY</h2>
+                    <span class="logo-line"></span>
+                    <span class="logo-title">Admin Panel</span>
+                </div> -->
+            </div>
+        </header>
+
+        <section id="Login">
+            <div class="login-container">
+                <div class="form">
+                    <p>Welcome Admin</p>
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <button>Join</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <section id="Second-panel">
+        <section class="left">
+            <aside>
+                <div id="second_admin_logo">
+                    <img src="../assets/photos/logo-white.svg" alt="logo" width="282.59px">
+                    <!-- <img src="./img/book-white-logo.svg" alt="logo">
+                    <div class="logo-content">
+                        <h2>LIBRARY</h2>
+                        <span class="logo-line"></span>
+                        <span class="logo-title">Admin Panel</span>
+                    </div> -->
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <img src="../assets/photos/book-white-logo.svg" alt="book">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <img src="../assets/photos/book-white-logo.svg" alt="book">
+                            <a href="#">Books</a>
+                        </li>
+                        <li>
+                            <img src="../assets/photos/book-white-logo.svg" alt="book">
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <img src="../assets/photos/book-white-logo.svg" alt="book">
+                            <a href="#">Join Us</a>
+                        </li>
+                        <li>
+                            <img src="../assets/photos/book-white-logo.svg" alt="book">
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <img src="../assets/photos/book-white-logo.svg" alt="book">
+                            <a href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+
+
+        <section class="right">
+
+            <!-- Responsive Mobile view -->
+            <div class="mobile-container">
+                <div class="mobile-header">
+                    <img width="177px" src="./img/book-mobile-logo.svg" alt="book-mobile">
+                    <img src="./img/admin-panel-hamburger.svg" alt="list">
+                </div>
+            </div>
+
+
+            <div class="account-logo">
+                <div class="profile-admin" style="cursor: pointer;">
+                    <img src="./img/user.svg" alt="user">
+                    <p>Admin</p>
+                </div>
+            </div>
+
+
+
+            <section class="admin-container">
+                <h1>Add book</h1>
+                <div class="search-container">
+                    <div class="search-book">
+                        <p>Search book</p>
+                        <div class="search-bar">
+                            <input type="text" placeholder="Dan Brown">
+                            <button>
+                                <img src="./img/search-icon.svg" alt="search-icon" width="17px">
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="search-history">
+                        <div>
+                            <img src="./img/clock.svg" alt="clock">
+                            <p>Dan Brown Davinc</p>
+                        </div>
+                        <div>
+                            <img src="./img/clock.svg" alt="clock">
+                            <p>Dan Brown Angel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="book-form">
+                    <h3>Book form</h3>
+                    <div class="book-form-container">
+                        <div>
+                            <p>Book Name</p>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <p>Author Name</p>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <p>Book Image Url</p>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <p>Description</p>
+                            <input style="height: 89px;" type="text">
+                        </div>
+                        <div>
+                            <p>Book Type</p>
+                            <input type="text">
+                        </div>
+
+                        <div>
+                            <button>Add</button>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="about-store">
+                    <h4>About Store</h4>
+                    <div class="about-store-container">
+                        <div>
+                            <p>Title</p>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <p>Book Image Url</p>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <p>Description</p>
+                            <input style="height: 89px;" type="text">
+                        </div>
+                        <div>
+                            <button>About info add</button>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <section class="join-us">
+                <h5>Join Us</h5>
+                <div class="join-us-table">
+                    <table>
+                        <tr>
+                            <th>#</th>
+                            <th>Full Name</th>
+                            <th>Email Address</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Audrey Mckinney</td>
+                            <td>lisa.watson@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Savannah Howard</td>
+                            <td>jeff.brown@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Morris Cooper</td>
+                            <td>terra.hamilton@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Victoria Lane</td>
+                            <td>deanna.curtis@example.com</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+
+            <section class="books-content">
+                <h6>Books</h6>
+                <div class="books-table">
+                    <table>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Author</th>
+                        </tr>
+                        <tr class="bg-white">
+                            <td>1</td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center gap-2">
+                                    <img src="./img/image 8.jpg" alt="image-book">
+                                    <p>Angels</p>
+                                </div>
+                            </td>
+                            <td>Lorem ipsum test...</td>
+                            <td>Dedectiv</td>
+                            <td>Dan Brown</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </section>
+
+
+
+            <section class="Contact-Us">
+                <p>Contact Us</p>
+                <div class="table-content">
+                    <table>
+                        <tr>
+                            <th>#</th>
+                            <th>Full Name</th>
+                            <th>Address</th>
+                            <th>Email Address</th>
+                            <th>Phone Number</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Audrey Mckinney</td>
+                            <td>1473 Ranchview Dr undefined San Jose</td>
+                            <td>lisa.watson@example.com</td>
+                            <td>(209) 555-0104</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Savannah Howard</td>
+                            <td>8445 Railroad St undefined Tampa</td>
+                            <td>jeff.brown@example.com</td>
+                            <td>(201) 555-0124</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Morris Cooper</td>
+                            <td>8584 W Sherman Dr undefined Desoto</td>
+                            <td>terra.hamilton@example.com</td>
+                            <td>(505) 555-0125</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Victoria Lane</td>
+                            <td>1921 Ranchview Dr undefined San Francisco</td>
+                            <td>deanna.curtis@example.com</td>
+                            <td>(704) 555-0127</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </section>
+
+    </section>
+</body>
+
+</html>
