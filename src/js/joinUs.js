@@ -52,26 +52,26 @@ close.addEventListener("click", function () {
 
 close_join_us.addEventListener("click", closeJoinModal);
 
-join.addEventListener("click", function () {
-  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+// join.addEventListener("click", function () {
+//   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-  if (joinUsFullname.value === "" || !emailPattern.test(joinUsEmail.value)) {
-    modalErrorMessage.style.display = "block";
-    setTimeout(() => {
-      modalErrorMessage.style.display = "none";
-    }, 1500);
-    return;
-  }
+//   if (joinUsFullname.value === "" || !emailPattern.test(joinUsEmail.value)) {
+//     modalErrorMessage.style.display = "block";
+//     setTimeout(() => {
+//       modalErrorMessage.style.display = "none";
+//     }, 1500);
+//     return;
+//   }
 
-  const joinUser = {
-    fullname: joinUsFullname.value,
-    email: joinUsEmail.value,
-  };
+//   const joinUser = {
+//     fullname: joinUsFullname.value,
+//     email: joinUsEmail.value,
+//   };
 
-  joinUsFullname.value = "";
-  joinUsEmail.value = "";
-  console.log(joinUser); //for add firebase
-});
+//   joinUsFullname.value = "";
+//   joinUsEmail.value = "";
+//   console.log(joinUser); //for add firebase
+// });
 
 window.addEventListener("click", function (e) {
   if (e.target == joinUsModal) {
