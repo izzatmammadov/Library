@@ -43,8 +43,6 @@
         }, 1500);
         return;
       }
-       
-      
 
       const joinUser = {
         fullname: joinUsFullname.value,

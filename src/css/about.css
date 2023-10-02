@@ -1,4 +1,3 @@
-
 body {
   background-color: var(--mainBodyColor);
 }
@@ -9,7 +8,7 @@ body {
   padding: 100px 58px 0px 150px;
   gap: 8px;
 }
-main{
+main {
   padding-top: 111px;
 }
 .text-content {
