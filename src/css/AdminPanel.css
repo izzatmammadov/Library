@@ -621,10 +621,26 @@ th {
     padding: 0 0 289px;
   }
 
-
-
   .admin-container .book-form-container,
   .admin-container .about-store-container {
     width: 100%;
   }
+
+  /* Mobile Aside */
+
+  .left #second_admin_logo {
+    padding: 15px 0 72px 12px;
+  }
+
+  .left #second_admin_logo img {
+    width: 177px;
+  }
+
+  .left #second_admin_logo .list {
+    padding-left: 26px;
+  }
+  .left #second_admin_logo .list ul {
+    padding-left: 0px;
+  }
+  
 }
