@@ -313,19 +313,20 @@ body {
   line-height: 196.187%;
 }
 
-.header_about_div button {
+.header_about_div a {
   color: #fff;
   font-family: var(--fontMons);
   background: var(--mainColorOrange);
   border: none;
   box-shadow: 0px 5px 15px rgb(225, 106, 0.35);
-  padding: 8px 24px;
+  padding: 11px 24px;
   font-size: 16px;
   font-weight: 900;
   line-height: 196.187%;
+  text-decoration: none;
 }
 
-.header_about_div button:hover {
+.header_about_div a:hover {
   transition: all 0.3s;
   transform: scale(1.1);
 }
