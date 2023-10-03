@@ -22,7 +22,7 @@ body {
   background: #fff;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%;
+  width: 675px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   margin: 100px auto;
   transition: transform 0.3s ease;
@@ -118,7 +118,7 @@ body {
   background: #241400bf;
   color: #fff;
   padding: 20px;
-  width: 50%;
+  width: 100%;
   height: 100%;
   text-align: center;
   position: fixed;
@@ -324,6 +324,7 @@ body {
   font-weight: 900;
   line-height: 196.187%;
   text-decoration: none;
+  text-align: center;
 }
 
 .header_about_div a:hover {
@@ -388,7 +389,7 @@ body {
 
 .about_store_section {
   width: 80%;
-  margin: 136px auto 160px;
+  margin: 110px auto 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -657,9 +658,6 @@ body {
 /* Responsive Design Codes */
 
 @media only screen and (max-width: 1200px) and (min-width: 901px) {
-  .modal_content {
-    width: 70%;
-  }
 
   .navbar {
     width: 100%;
@@ -729,7 +727,7 @@ body {
 
 @media only screen and (max-width: 900px) and (min-width: 601px) {
   .modal_content {
-    width: 70%;
+    width: 75%;
   }
 
   .header_about_div {
@@ -747,8 +745,9 @@ body {
   .navbar {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 30px;
   }
 
   #joinUsIcon {
@@ -764,7 +763,7 @@ body {
   }
 
   .logo_div {
-    width: 75%;
+    width: 170px;
   }
 
   .logo_div p {
@@ -851,10 +850,6 @@ body {
     padding: 46px 10px;
     gap: 24px;
   }
-
-  .responsive_modal_content {
-    width: 40%;
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -895,6 +890,7 @@ body {
     align-items: center;
     gap: 26px;
     width: 100%;
+    margin-bottom: 40px;
   }
 
   .header_about_div h1 {
@@ -906,13 +902,12 @@ body {
     width: 100%;
   }
 
-  .header_about_div button {
+  .header_about_div a {
     width: 100%;
-    margin-bottom: 40px;
   }
 
   .header_books_div {
-    width: 90%;
+    width: 100%;
   }
 
   .header_books_div img {
