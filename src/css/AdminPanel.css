@@ -1,3 +1,7 @@
+body {
+  scroll-behavior: smooth;
+}
+
 .First-login {
   background-color: var(--mainColorRed);
   padding-bottom: 695px;
@@ -103,6 +107,10 @@
   padding: 106px 35px 26px;
 }
 
+#closeBtn {
+  display: none;
+}
+
 #Second-panel .left {
   max-width: 355px;
   width: 100%;
@@ -112,6 +120,7 @@
   left: 0;
   top: 0;
   bottom: 0;
+  display: block;
 }
 
 #Second-panel .left aside div {
@@ -197,6 +206,7 @@
   display: flex;
   justify-content: flex-end;
   padding: 60px 58px 0 0;
+  cursor: pointer;
 }
 
 #Second-panel .right .profile-admin {
@@ -240,10 +250,11 @@
   height: 41px;
   border: 2px solid #391f007a;
   border-radius: 34px;
+  padding-left: 33px;
 }
 
 .admin-container .search-bar input::placeholder {
-  padding: 9px 0 10px 33px;
+  padding: 9px 0 10px;
   font-family: Preah Vihear;
   font-size: 14px;
   font-weight: 400;
@@ -284,6 +295,7 @@
   font-size: 14px;
   font-weight: 400;
   color: #bcbcbc;
+  margin: 0;
 }
 
 .admin-container .book-form {
@@ -525,6 +537,10 @@ th {
   background-color: #f9fafc;
 }
 
+#left-first {
+  display: none;
+}
+
 /* Responsive Design */
 
 @media only screen and (max-width: 600px) {
@@ -629,18 +645,41 @@ th {
   /* Mobile Aside */
 
   .left #second_admin_logo {
-    padding: 15px 0 72px 12px;
+    padding: 15px 7px 72px 12px;
   }
 
   .left #second_admin_logo img {
     width: 177px;
   }
 
-  .left #second_admin_logo .list {
+  #Second-panel .left aside .list {
     padding-left: 26px;
   }
-  .left #second_admin_logo .list ul {
+  #Second-panel .left aside .list ul {
     padding-left: 0px;
   }
-  
+
+  #second_admin_logo {
+    display: flex;
+    justify-content: space-between;
+  }
+  #second_admin_logo img {
+    cursor: pointer;
+  }
+
+  #closeBtn {
+    display: block;
+  }
+
+  .join-us-table {
+    overflow-x: scroll;
+  }
 }
+
+/* Hamburger */
+
+/* @media only screen and (max-width: 1440px) {
+  #Second-panel .left {
+    display: block!;
+  }
+} */
