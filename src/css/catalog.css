@@ -1,17 +1,18 @@
-
-
 body {
   background-color: var(--mainBodyColor);
 }
 .sections {
   width: 100%;
-  padding: 123px 200px 0px 200px;
+  padding: 123px 160px 0px 160px;
 }
 .new-icon {
   position: absolute;
-  z-index: 2;
-  top: -5px;
-  right: -35px;
+  z-index: 1;
+  top: 0px;
+  right: 0px;
+  width: 50px;
+  height: 26px;
+
 }
 .new-book {
   position: relative;
@@ -63,9 +64,29 @@ body {
     font-style: normal;
     font-weight: 900;
   }
+  && button{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 10px;
+  }
 }
+
+.sections {
+  position: relative;
+}
+
+.arrows {
+  position: absolute;
+  top: 60%;
+  left: 7%;
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+}
+
 .slider-catagories {
-  width: 50%;
+  overflow-x: auto;
+  max-width: 500px;
   display: flex;
   justify-content: space-between;
   && button {
@@ -78,9 +99,17 @@ body {
     font-style: normal;
     font-weight: 400;
     &&:hover {
-      border-bottom: 1px solid var(--mainColorText);
+      color: var(--mainColorOrange);
+     
     }
   }
+  &&::-webkit-scrollbar {
+    height: 3px;
+  }
+}
+.books-img {
+  width: 130px;
+  height: 180px;
 }
 .slider-card {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
@@ -88,9 +117,7 @@ body {
   background-color: #fff;
   text-align: center;
   width: 180px;
-  && img {
-    width: 100%;
-  }
+  
   && p:nth-child(2) {
     overflow: hidden;
     white-space: nowrap;
@@ -126,30 +153,18 @@ body {
     text-transform: uppercase;
   }
 }
-.slider-card {
-  cursor: pointer;
-}
 .best-seller {
   margin-bottom: 50px;
 }
-/* .next-arrow,.best-seller-next-arrow,.new-releases-next-arrow{
-  position: absolute;
-  right: -30px;
-  top: 40%;
-  z-index: 2;
-  background-color: transparent;
-  border: none;
-} */
 @media screen and (max-width: 1201px) {
   .sections {
     padding: 123px 120px 0px 120px;
   }
   .text-side {
+    width: 80%;
     && h1 {
       width: 50%;
     }
-    width: 100%;
-    margin: 0px;
   }
 }
 
@@ -169,11 +184,7 @@ body {
       justify-content: start;
       align-items: start;
     }
-
-    .swiper-button-next {
-      display: none;
-    }
-    .swiper-button-prev {
+    .arrows {
       display: none;
     }
     .slider-catagories {
@@ -193,6 +204,5 @@ body {
   }
   .text-side {
     width: 100%;
-    margin: 0px;
   }
 }
