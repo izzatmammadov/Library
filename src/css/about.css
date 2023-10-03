@@ -57,6 +57,7 @@ main{
   }
   .text-content {
     width: 100%;
+    overflow-x: auto;
   }
 }
 @media screen and (max-width: 769px) {
