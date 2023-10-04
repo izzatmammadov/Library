@@ -1,9 +1,6 @@
 body {
   background: var(--mainBodyColor);
 }
-body::-webkit-scrollbar-thumb {
-  background-color: var(--mainColorOrange);
-}
 
 .showMoreText {
   display: none;
