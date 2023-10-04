@@ -1,0 +1,294 @@
+body {
+  background: var(--mainBodyColor);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--mainColorOrange);
+}
+
+.showMoreText {
+  display: none;
+}
+.bookAbout {
+  padding-top: 111px;
+  && .btnBack {
+    background: var(--mainColorOrange);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+    font-family: var(--fontMons);
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    padding: 4px 12px 4px 6px;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 50px;
+    && i {
+      transition: 0.3s ease-in-out;
+    }
+  }
+  && .btnBack:hover i {
+    margin-right: 10px;
+  }
+  && .bookProduct {
+    width: 60%;
+    && .bookInfo {
+      margin-bottom: 122px;
+      && .bookYear {
+        background: #2f80ed;
+        color: #fff;
+        font-weight: 700;
+        font-family: var(--fontMons);
+        font-size: 12px;
+        width: 69px;
+        border-radius: 3px;
+        padding: 5px 18px;
+        margin-bottom: 0;
+      }
+      && .bookName {
+        color: var(--mainColorText);
+        font-family: var(--fontMons);
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+      && .bookDateOfAdded {
+        color: var(--mainColorText);
+        font-family: var(--fontMons);
+        font-weight: 700;
+      }
+      && .authorSName {
+        color: var(--mainColorText);
+        font-family: var(--fontMons);
+        font-weight: 400;
+        font-size: 22px;
+      }
+      && .bookDetails {
+        width: 90%;
+        max-height: 262px;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+      }
+      && .moreDetails {
+        border: none;
+        background: transparent;
+        padding: 0;
+        font-weight: 500;
+        transition: all 0.2s;
+        &&:hover {
+          color: var(--mainColorOrange);
+        }
+      }
+    }
+    && .bookComment {
+      margin-top: 50px;
+      && form {
+        && .anonimComment {
+          width: 70%;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px 0 0 5px;
+          background: rgba(255, 255, 255, 0.8);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
+
+          &&:focus {
+            outline: none;
+          }
+        }
+
+        && .commentAdd {
+          border: none;
+          border-radius: 0 5px 5px 0;
+          background: var(--mainColorOrange);
+          padding: 10px 9px 6px;
+          transition: 0.3s ease-in-out;
+          opacity: 1;
+          &&:hover {
+            opacity: 0.7;
+          }
+          && .commentAddIcon {
+            /* color: #fff; */
+            transition: 0.3s ease-in-out;
+          }
+          && :hover.commentAddIcon {
+            padding-left: 10px;
+          }
+        }
+        && .errorBox {
+          width: 70%;
+          height: 40px;
+          margin-top: 10px;
+          border-radius: 10px;
+          color: red;
+          text-align: left;
+          opacity: 0;
+          transition: all 0.4s;
+          font-weight: 800;
+          text-shadow: 0 4px 4px #dc4530;
+        }
+        .userComment {
+          width: 80%;
+          && .scrollActiveY {
+            height: 60vh;
+            overflow-y: scroll;
+          }
+          /* && .scrollActiveY::-webkit-scrollbar {
+            width: 4px;
+            box-shadow: 0 0 5px 0px var(--mainColorOrange);
+          }
+          && .scrollActiveY::-webkit-scrollbar-thumb {
+            background-color: var(--mainColorOrange);
+            border-radius: 10px;
+          } */
+          && .userCommentUl {
+            padding: 0;
+            max-height: 600px;
+            overflow-y: auto;
+            &&::-webkit-scrollbar-thumb {
+              background-color: var(--mainColorOrange);
+              border-radius: 10px;
+            }
+            &&::-webkit-scrollbar {
+              width: 4px;
+              box-shadow: 0 0 5px 0px var(--mainColorOrange);
+            }
+            && .scrollActiveX {
+              overflow-x: scroll;
+            }
+            && .scrollActiveX::-webkit-scrollbar {
+              height: 2px;
+            }
+            && .scrollActiveX::-webkit-scrollbar-thumb {
+              background-color: var(--mainColorOrange);
+              border-radius: 10px;
+            }
+
+            && .userCommentLi {
+              border-radius: 5px;
+              background: rgba(255, 255, 255, 0.8);
+              box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
+              margin-bottom: 50px;
+              width: 96%;
+              padding: 30px 18px;
+              text-align: left;
+              && .anonim {
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  && .bookImg {
+    position: relative;
+    /* width: 25%; */
+    && .book {
+      width: 100%;
+    }
+    && .new {
+      position: absolute;
+      padding: 5px 30px;
+      border-radius: 5px;
+      background: #e03e1a;
+      color: #fff;
+      font-family: var(--fontMons);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      right: 19px;
+      top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    flex-direction: column-reverse;
+    text-align: center;
+    && .bookProduct {
+      width: 100%;
+      && .bookComment {
+        && form {
+          && .userComment {
+            width: 90%;
+            && .userCommentUl {
+              margin-left: 50px;
+            }
+            && .userCommentUl::-webkit-scrollbar {
+              width: 1px;
+            }
+          }
+        }
+      }
+      && .bookInfo {
+        && .bookDetails {
+          width: 100%;
+          padding: 0 16px;
+        }
+        && .bookYear {
+          width: 18%;
+        }
+      }
+    }
+    && .bookImg {
+      margin: 50px;
+    }
+    && .bookImg {
+      && .new {
+        font-size: 10px;
+        padding: 3px 16px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .box {
+    && .bookImg {
+      && .new {
+        font-size: 8px;
+        padding: 2px 14px;
+        font-weight: 600;
+      }
+    }
+    && .bookProduct {
+      && .bookComment {
+        && form {
+          && .userComment {
+            && .userCommentUl {
+              margin-left: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 370px) {
+  .box {
+    && .bookImg {
+      && .new {
+        font-size: 6px;
+        padding: 1px 10px;
+        font-weight: 600;
+        right: 10px;
+      }
+    }
+    && .bookProduct {
+      && .bookInfo {
+        && .bookYear {
+          width: 23%;
+        }
+      }
+      && .bookComment {
+        && form {
+          && .userComment {
+            && .userCommentUl {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
