@@ -6,6 +6,7 @@ let moreDetails = document.querySelector(".moreDetails");
 let bookDetails = document.querySelector(".bookDetails");
 let points = document.querySelector(".points");
 let errorBox = document.querySelector(".errorBox");
+let backBtn = document.querySelector("#backBtn");
 
 const date = new Date();
 const hours = date.getHours();
@@ -14,6 +15,8 @@ const day = date.getDate();
 const month = date.getMonth() + 1;
 const year = date.getFullYear();
 
+
+backBtn.addEventListener("click", function(){window.history.back();})
 // Add new comment
 
 
