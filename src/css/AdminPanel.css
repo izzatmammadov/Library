@@ -160,6 +160,7 @@ body {
   position: relative;
 }
 
+
 #Second-panel .left aside .list ul li a::after {
   content: "";
   position: absolute;
@@ -177,7 +178,7 @@ body {
   width: 100%;
   left: 0;
   height: 2px;
-  background-color: #e16a00;
+  background-color: #fff;
   transition: 0.3s;
   transition-timing-function: ease-in-out;
   transform: scaleX(0);

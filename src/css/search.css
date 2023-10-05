@@ -34,7 +34,6 @@ body {
   border: 1px solid var(--mainBorderColor);
   padding: 10px;
   border-radius: 5px;
-
   transition: border-color 0.3s ease;
 }
 
@@ -54,7 +53,7 @@ body {
   color: #fff;
   cursor: pointer;
   font-family: "Crimson Text", serif;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s;
 }
 
 .inputBtn:hover {
@@ -63,20 +62,19 @@ body {
 
 .box2 {
   background-color: #fff;
-
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 20px;
+  padding: 40px 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   gap: 40px;
-  margin-top: 90px;
   text-align: center;
 }
 
 .swiper {
   width: 70%;
+  margin-top: 95px;
 }
 
 .swiper-button-next,
@@ -110,6 +108,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-align: left;
 }
 
 .book {
@@ -138,8 +137,7 @@ body {
   }
 
   .box1 {
-    margin-left: 10px;
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -153,7 +151,7 @@ body {
     width: 100%;
     height: 40px;
     font-size: 16px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s;
     cursor: pointer;
     transition: border-color 0.3s ease;
   }
@@ -181,12 +179,11 @@ body {
     box-shadow: none;
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    padding: 0px;
   }
 
   .book1 {
     width: 100%;
-    padding: 20px 30px;
   }
 
   .book_name {
@@ -200,7 +197,8 @@ body {
   }
 
   .book_title {
-    width: 80%;
+    align-items: center;
+    padding: 0px;
   }
 
   .author {
@@ -211,9 +209,8 @@ body {
   }
 
   .title {
-    width: 100%;
-    font-size: 12px;
-    padding: 4px;
+    font-size: 14px;
+    text-align: center;
   }
 }
 
@@ -233,7 +230,7 @@ body {
     width: 100%;
   }
   .box1 {
-    width: 50%;
+    width: 80%;
     display: flex;
     flex-direction: column;
   }
@@ -276,40 +273,36 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    padding: 10px;
+    padding: 0px;
   }
 
   .book1 {
-    width: 70%;
+    width: 100%;
   }
 
   .book1 img {
-    width: 75%;
+    width: 50%;
   }
 
   .book_title {
-    padding: 5px;
-    width: 85%;
+    width: 100%;
+    text-align: center;
   }
 
   .book_title h2 {
-    font-size: 40px;
+    font-size: 32px;
     text-align: center;
-    padding: 5px;
   }
 
   .author {
     text-align: center;
     color: #241400;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
   }
 
   .title {
-    width: 100%;
-    font-size: 24px;
-    padding: 10px;
+    font-size: 16px;
   }
 }
 
@@ -373,7 +366,6 @@ body {
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
-    padding: 5px 0px;
   }
   .swiper-button-next,
   .swiper-button-prev {
@@ -393,7 +385,6 @@ body {
     font-weight: 400;
     font-family: var(--fontMons);
     text-align: center;
-    padding: 5px;
   }
 
   .title {
@@ -401,7 +392,6 @@ body {
     font-size: 16px;
     font-family: var(--fontMons);
     line-height: 196%;
-    padding: 10px 5px 10px 5px;
     font-weight: 500;
   }
 
@@ -409,6 +399,7 @@ body {
     width: 70%;
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
 
   .book {
@@ -417,5 +408,9 @@ body {
 
   .book1 {
     width: 65%;
+  }
+
+  .book_title {
+    padding: 0px
   }
 }
