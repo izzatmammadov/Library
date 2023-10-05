@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
+
+body {
+  background-color: var(--mainBodyColor);
+}
+
+.contact_main {
+  padding-top: 140px;
+}
+
+.form-control1 {
+  display: flex;
+
+  gap: 36px;
+  margin-bottom: 33px;
+}
+
+.form-control1 input {
+  width: 50%;
+  height: 70px;
+  border: 1px solid #cecece;
+  background: #fff;
+  padding: 26px 0px 24px 38px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #797667;
+}
+
+.form-control1 ::placeholder {
+  color: #797667;
+  font-family: "Crimson Text", serif;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.form-control2 {
+  display: flex;
+
+  gap: 36px;
+}
+
+.form-control2 input {
+  width: 50%;
+  height: 70px;
+  border: 1px solid #cecece;
+  background: #fff;
+  padding: 26px 0px 24px 38px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #797667;
+}
+
+.form-control2 ::placeholder {
+  color: #797667;
+  font-family: "Crimson Text", serif;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.form-control3 {
+  margin-top: 33px;
+}
+
+.form-control3 textarea {
+  width: 100%;
+  height: 153px;
+  border: 1px solid #cecece;
+  background: #fff;
+  padding: 26px 0px 24px 38px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #797667;
+}
+
+.form-control3 ::placeholder {
+  color: #797667;
+  font-family: "Crimson Text", serif;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.container .p-div {
+  color: #333333;
+  font-family: var(--fontMons);
+  font-size: 36px;
+  font-weight: 900;
+  padding-left: 8px;
+}
+
+.button-div {
+  width: 100%;
+  height: 75px;
+  display: flex;
+
+  justify-content: center;
+  margin-top: 85px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e16a00;
+  width: 50%;
+  height: 70px;
+
+  border: none;
+
+  color: #fff;
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  gap: 28px;
+  width: 90%;
+}
+
+@media screen and (max-width: 900px) and (min-width: 330px) {
+  .form-control1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    margin-bottom: 33px;
+  }
+
+  .form-control1 input {
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    background: #fff;
+    width: 100%;
+
+    height: 40px;
+  }
+
+  .form-control1 ::placeholder {
+    color: #241400;
+    font-family: "Crimson Text", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .form-control2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-control2 input {
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    background: #fff;
+    width: 100%;
+    height: 40px;
+  }
+
+  .form-control2 ::placeholder {
+    color: #241400;
+    font-family: "Crimson Text", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .form-control3 textarea {
+    border: 1px solid #cecece;
+    background: #fff;
+    padding: 26px 0px 24px 38px;
+    border-radius: 5px;
+
+    width: 100%;
+    height: 101px;
+  }
+
+  .form-control3 ::placeholder {
+    color: #241400;
+    font-family: "Crimson Text", serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .p-div {
+    text-align: center;
+    padding-left: 0px;
+  }
+
+  .p-div p {
+    color: #241400;
+    font-family: var(--fontMons);
+    font-size: 50px;
+    font-weight: 900;
+  }
+
+  .button {
+    border-radius: 5px;
+    background: #e16a00;
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .button-div {
+    padding-top: 60px;
+  }
+
+  .container .p-div {
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .form-control1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 29px;
+    padding: 0px 38px 0px 38px;
+  }
+
+  .form-control1 input {
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    background: #fff;
+    width: 100%;
+
+    height: 40px;
+  }
+
+  .form-control1 ::placeholder {
+    color: #241400;
+    font-family: "Crimson Text", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .form-control2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 38px 0px 38px;
+  }
+
+  .form-control2 input {
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    background: #fff;
+    width: 100%;
+    height: 40px;
+  }
+
+  .form-control2 ::placeholder {
+    color: #241400;
+    font-family: "Crimson Text", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .form-control3 textarea {
+    border: 1px solid #cecece;
+    background: #fff;
+    padding: 26px 0px 24px 38px;
+    border-radius: 5px;
+
+    width: 100%;
+    height: 101px;
+  }
+
+  .form-control3 ::placeholder {
+    color: #241400;
+    font-family: "Crimson Text", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .form-control3 {
+    padding: 0px 38px 0px 38px;
+  }
+
+  .container .p-div {
+    padding-left: 0px;
+  }
+
+  .p-div {
+    text-align: center;
+    padding-top: 41px;
+  }
+
+  .p-div p {
+    color: #241400;
+    font-family: var(--fontMons);
+    font-size: 35px;
+    font-weight: 900;
+  }
+
+  .button {
+    border-radius: 5px;
+    background: #e16a00;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    font-family: "Crimson Text", serif;
+  }
+
+  .button-div {
+    padding-top: 45px;
+    padding: 0px 38px 0px 38px;
+  }
+}
