@@ -2,6 +2,20 @@ body {
   background: var(--mainBodyColor);
 }
 
+#commentErrorMessage {
+  display: none;
+  font-size: 20px;
+  color: #fff;
+  font-family: var(--fontRoboto);
+  font-weight: 400;
+  background: #ff0000;
+  width: 70%;
+  padding: 4px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  text-align: center;
+}
+
 .showMoreText {
   display: none;
 }
@@ -136,8 +150,11 @@ body {
             border-radius: 10px;
           } */
           && .userCommentUl {
-            padding: 0;
-            max-height: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 0px;
+            max-height: 320px;
             overflow-y: auto;
             &&::-webkit-scrollbar-thumb {
               background-color: var(--mainColorOrange);
@@ -145,19 +162,7 @@ body {
             }
             &&::-webkit-scrollbar {
               width: 4px;
-              box-shadow: 0 0 5px 0px var(--mainColorOrange);
             }
-            && .scrollActiveX {
-              overflow-x: scroll;
-            }
-            && .scrollActiveX::-webkit-scrollbar {
-              height: 2px;
-            }
-            && .scrollActiveX::-webkit-scrollbar-thumb {
-              background-color: var(--mainColorOrange);
-              border-radius: 10px;
-            }
-
             && .userCommentLi {
               border-radius: 5px;
               background: rgba(255, 255, 255, 0.8);
@@ -198,6 +203,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+#commentErrorMessage {
+  margin: 10px auto;
+  width: 82%;
+}
+
   .box {
     flex-direction: column-reverse;
     text-align: center;
@@ -240,6 +250,10 @@ body {
 }
 
 @media screen and (max-width: 470px) {
+  #commentErrorMessage {
+    width: 85%;
+  }
+
   .box {
     && .bookImg {
       && .new {
@@ -262,6 +276,9 @@ body {
   }
 }
 @media screen and (max-width: 370px) {
+  #commentErrorMessage {
+    width: 90%;
+  }
   .box {
     && .bookImg {
       && .new {

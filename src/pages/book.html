@@ -40,6 +40,7 @@
           <input id="joinUsFullname" type="text" placeholder="Fullname" />
           <input id="joinUsEmail" type="email" placeholder="E-mail" />
           <p id="modalErrorMessage">Fill in the fields corectly!</p>
+          <p id="modalSuccessMessage">Successfully!</p>
           <button id="join">Join</button>
         </div>
       </div>
@@ -74,8 +75,8 @@
       <div class="list_div">
         <ul class="nav_items">
           <li><a href="../../index.html">Home</a></li>
-          <li><a href="./catalog.html">Catalog</a></li>
-          <li><a href="./about.html" class="nav_active_a">About Store</a></li>
+          <li><a href="./catalog.html" class="nav_active_a">Catalog</a></li>
+          <li><a href="./about.html">About Store</a></li>
           <li><a href="./contact.html">Contact Us</a></li>
           <li><a href="./search.html">Search</a></li>
         </ul>
@@ -93,6 +94,7 @@
         </button>
       </div>
     </header>
+
     <div class="bookAbout">
       <div class="container">
         <button id="backBtn" class="btnBack">
@@ -143,13 +145,15 @@
                     type="text"
                     placeholder="Your anonim comment..."
                   />
-                  <button type="submit" class="commentAdd">
+                  <button class="commentAdd">
                     <img
                       class="commentAddIcon"
                       src="../assets/photos/send.svg"
                       alt=""
                     />
                   </button>
+                  <p id="commentErrorMessage">Fill in the fields corectly!</p>
+
                   <div class="errorBox"></div>
                   <div class="userComment">
                     <ul class="userCommentUl">
@@ -260,7 +264,7 @@
       </div>
     </footer>
     <script src="../js/joinUs.js"></script>
-    <script src="../js/hamburger.js"></script>
+    <script src="../js/joinUsModule.js"></script>
     <script src="../js/book.js"></script>
   </body>
 </html>

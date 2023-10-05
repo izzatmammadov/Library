@@ -61,9 +61,25 @@
 #modalErrorMessage {
   display: none;
   font-size: 20px;
-  color: #ff0000;
-  font-family: var(--fontMons);
-  text-shadow: 0px 5px 15px;
+  color: #fff;
+  font-family: var(--fontRoboto);
+  font-weight: 400;
+  background: #ff0000;
+  width: 100%;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+#modalSuccessMessage {
+  display: none;
+  font-size: 20px;
+  color: #fff;
+  font-family: var(--fontRoboto);
+  font-weight: 400;
+  background: #00cd15;;
+  width: 100%;
+  padding: 4px;
+  border-radius: 5px;
 }
 
 .modal_content button {
