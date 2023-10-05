@@ -372,9 +372,6 @@
     gap: 24px;
   }
 
-  .responsive_modal_content {
-    width: 40%;
-  }
 }
 
 @media only screen and (max-width: 600px) {

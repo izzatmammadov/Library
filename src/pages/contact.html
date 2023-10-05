@@ -86,27 +86,23 @@
         </button>
       </div>
     </header>
-    <!---FORM CONTACT-->
+
     <main class="contact_main">
       <div class="container mx-auto p-0">
         <div class="p-div">
           <p>Contact Us</p>
         </div>
 
+    <!---FORM CONTACT-->
         <form class="form">
           <div class="form-control1">
-            <input
-              type="text"
-              id="fname"
-              name="fname"
-              placeholder="Full Name"
-            />
-            <input type="email" id="fname" name="fname" placeholder="Email" />
+            <input type="text" id="contactName" placeholder="Full Name" />
+            <input type="email" id="contactEmail" placeholder="Email" />
           </div>
 
           <div class="form-control2">
-            <input type="text" id="fname" name="fname" placeholder="Address" />
-            <input type="number" id="fname" name="fname" placeholder="Phone" />
+            <input type="text" id="contactAdress" placeholder="Address" />
+            <input type="number" id="contactPhone" placeholder="Phone" />
           </div>
 
           <div class="form-control3">
@@ -115,16 +111,18 @@
               placeholder="Note"
               oninput="letterCounter()"
             ></textarea>
-
             <p><span id="textLength">0</span>/100</p>
+          <p id="contactErrorMessage">Fill in the fields correctly!</p>
+          <p id="contactSuccessMessage">Successfully!</p>
           </div>
         </form>
 
         <div class="button-div">
-          <button class="button">Send</button>
+          <button id="contactSendBtn" class="button">Send</button>
         </div>
       </div>
     </main>
+
     <footer class="footer">
       <section class="footer_icons_section">
         <p>Follow us on social media</p>

@@ -24,8 +24,6 @@
     const db = getDatabase(app);
     const users = ref(db, "users");
 
-
-
     const joinUsFullnameInput = document.querySelector("#joinUsFullname");
     const joinUsEmailInput = document.querySelector("#joinUsEmail");
     const joinBtn = document.querySelector("#join");
@@ -50,8 +48,13 @@
       };
       push(users,joinUser)
 
-      joinUsFullname.value = "";
-      joinUsEmail.value = "";
+      modalSuccessMessage.style.display = "block"
+
+      setTimeout(() => {
+        modalSuccessMessage.style.display = "none"
+        joinUsFullname.value = "";
+        joinUsEmail.value = "";
+      }, 1500);
 
       // console.log(joinUser); //for add firebase
     });

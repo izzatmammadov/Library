@@ -84,6 +84,18 @@ body {
   justify-content: space-between;
 }
 
+.arrows img {
+cursor: pointer;
+}
+
+.slider-1 {
+  padding: 20px 0px;
+}
+
+.slider_main_card {
+  padding: 10px;
+}
+
 .slider-catagories {
   overflow-x: auto;
   max-width: 500px;
@@ -93,14 +105,13 @@ body {
     background-color: var(--mainBodyColor);
     border: none;
     color: var(--mainColorText);
-
     font-family: var(--fontMons);
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
     &&:hover {
+      transition: all .3s;
       color: var(--mainColorOrange);
-     
     }
   }
   &&::-webkit-scrollbar {
@@ -111,8 +122,13 @@ body {
   width: 130px;
   height: 180px;
 }
+
+.slider-card button:hover {
+  transform: scale(1.1);
+  transition: all .3s;
+}
 .slider-card {
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.35);
   padding: 24px;
   background-color: #fff;
   text-align: center;
@@ -156,6 +172,7 @@ body {
 .best-seller {
   margin-bottom: 50px;
 }
+
 @media screen and (max-width: 1201px) {
   .sections {
     padding: 123px 120px 0px 120px;

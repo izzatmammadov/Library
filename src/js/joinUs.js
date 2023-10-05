@@ -4,6 +4,7 @@ const joinUsIcon = document.querySelector("#joinUsIcon");
 const joinUsModal = document.querySelector("#joinUsModal");
 const responsiveModal = document.querySelector("#responsiveModal");
 const modalErrorMessage = document.querySelector("#modalErrorMessage");
+const modalSuccessMessage = document.querySelector("#modalSuccessMessage");
 const joinUsFullname = document.querySelector("#joinUsFullname");
 const joinUsEmail = document.querySelector("#joinUsEmail");
 const join = document.querySelector("#join");
