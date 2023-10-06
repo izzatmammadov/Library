@@ -126,6 +126,7 @@ body {
 #Second-panel .left aside div {
   display: flex;
   gap: 8px;
+  z-index: 3;
 }
 
 #Second-panel .right {
@@ -160,7 +161,6 @@ body {
   position: relative;
 }
 
-
 #Second-panel .left aside .list ul li a::after {
   content: "";
   position: absolute;
@@ -178,7 +178,7 @@ body {
   width: 100%;
   left: 0;
   height: 2px;
-  background-color: #fff;
+  background-color: #e16a00;
   transition: 0.3s;
   transition-timing-function: ease-in-out;
   transform: scaleX(0);
@@ -276,12 +276,16 @@ body {
 
 .admin-container .search-history {
   max-width: 388px;
+  height: 185px;
   width: 100%;
   overflow-y: auto;
   border-radius: 35px;
   padding: 20px 36px;
   margin-top: 6px;
   background-color: #f1f0f0;
+  &&::-webkit-scrollbar {
+    width: 3px;
+  }
 }
 
 .admin-container .search-history div {
@@ -290,13 +294,242 @@ body {
   gap: 24px;
   margin-bottom: 13px;
 }
+.admin_mobil_header {
+  margin-bottom: 36px;
+  display: none;
+  justify-content: space-between;
+}
 
+.admin_overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: -100%;
+}
+
+.admin_overlay.show {
+  transition: 0.7s;
+  top: 0;
+  left: 0;
+  background: rgba(36, 20, 0, 0.7);
+}
+
+.admin_overlay_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin_close_icon {
+  width: 25px;
+  height: 25px;
+}
+
+.admin_overlay_body {
+  padding: 15px 9px 0px 11px;
+  width: 70%;
+  background: #720418;
+  height: 100%;
+}
+
+.admin_overlay_main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+}
+
+.admin_overlay_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.admin_overlay_item a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 196.187%;
+}
+
+.admin_book_overlay {
+  display: none;
+}
+
+.admin_book_overlay.show {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex !important;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.admin_book_overlay_main {
+  width: 46.88%;
+  background: #fff;
+  padding: 70px 55.6px 35px 55.6px;
+  border-radius: 9px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.alert {
+  z-index: 5;
+  position: fixed;
+  top: -100%;
+  transition: all 1s;
+}
+.alertActive {
+  top: 5%;
+}
+
+.add_book {
+  width: 100%;
+  border-radius: 10px;
+  padding: 12px 24px;
+  background: #ff8b00;
+  border: 0;
+  margin-top: 50px;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.admin_check_item {
+  display: flex;
+  align-items: center;
+  flex-direction: row !important;
+}
+
+.admin_check_input {
+  width: 15px !important;
+}
+.admin_form_dropdown {
+  position: relative;
+  margin-bottom: 0px !important;
+}
+
+.admin_dropdown_item_main {
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #e2e6ee;
+  background: #fff;
+  box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+  padding: 8px;
+  transition: 0.3s;
+  max-height: 100px;
+  overflow-y: scroll;
+}
+
+.admin_dropdown_item_main.active {
+  top: 40px;
+  z-index: 2;
+}
+
+.admin_dropdown_item {
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 12px;
+  border-radius: 8px;
+  &&:hover {
+    background-color: rgba(158, 168, 189, 0.31);
+  }
+}
+
+.admin_dropdown_active_item {
+  height: 40px;
+  cursor: pointer;
+  padding: 8px 12px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e2e6ee;
+  background: #fff;
+  box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+}
+
+.admin_dropdown_item_main.active + &&::after {
+  content: "b" !important;
+}
+
+.add_book_type {
+  color: green;
+  background: none;
+  border: 0;
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.admin_form_item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 0px !important;
+}
+
+.admin_form_label {
+  font-family: var(--fontRoboto);
+
+  color: #030102;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}
+
+.admin_form_input {
+  height: 40px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #e2e6ee;
+  background: #fff;
+  box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+
+  /* daxilindeki textin stayli */
+  color: #030102;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.admin_form_input::placeholder {
+  color: #030102;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .admin-container .search-history p {
   font-family: Preah Vihear;
   font-size: 14px;
   font-weight: 400;
   color: #bcbcbc;
   margin: 0;
+  &&:hover {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(120, 117, 117);
+  }
 }
 
 .admin-container .book-form {
@@ -318,7 +551,7 @@ body {
 }
 
 .admin-container .book-form-container div {
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 .admin-container .book-form-container div p {
@@ -338,7 +571,7 @@ body {
   box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
 }
 
-.admin-container .book-form-container div button {
+.admin-container .book-form-container div #bookAddBtn {
   width: 100%;
   border: none;
   padding: 12px 24px;
@@ -389,6 +622,12 @@ body {
   border: 1px solid #e2e6ee;
   box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
 }
+.del {
+  border: none;
+  background: transparent;
+  color: #720418;
+  cursor: pointer;
+}
 
 .admin-container .about-store-container div button {
   width: 100%;
@@ -403,7 +642,9 @@ body {
 }
 
 /* Table 1 */
-
+p {
+  margin-bottom: 0px !important;
+}
 #Second-panel .join-us {
   padding: 136px 0 136px 70px;
 }
@@ -428,13 +669,25 @@ body {
   letter-spacing: 0.01em;
   text-align: center;
   white-space: nowrap;
-  overflow: auto;
+  
+}
+.join-us-table tbody {
+  width: 100%;
+
+ 
 }
 
-#Second-panel .join-us-table table,
+
+tr{
+  height: 48px !important;
+}
+
+.join-us-table table,
 td,
 th {
-  /* border: 1px solid black; */
+  height: 48px !important;
+
+  white-space: nowrap;
   font-family: Nunito Sans;
   vertical-align: middle;
   box-shadow: 0px -1px 0px 0px #e6e7e9 inset;
@@ -443,6 +696,12 @@ th {
 #Second-panel .join-us-table table tr td,
 th {
   min-width: 54px;
+}
+td{
+  overflow-x: scroll;
+  max-width: 199px;
+ 
+
 }
 
 #Second-panel .join-us-table table th {
@@ -478,7 +737,7 @@ th {
   max-width: 1086px;
   width: 100%;
   text-align: center;
-  height: 97px;
+  height: 48px;
   font-family: Nunito Sans;
   font-size: 14px;
   font-weight: 400;
@@ -496,7 +755,28 @@ th {
 #Second-panel .books-table th {
   min-width: 30px;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
+.customTd {
+  
+ max-width: 199px;
+}
+.descriptionBody {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.descItem {
+  text-align: center;
+  overflow-x: scroll;
+  max-width: 199px;
+  width: 100%;
+  height: 20px;
+}
+.admin_book_img {
+  max-height: 36px;
+}
 /* Table 3 */
 
 #Second-panel .Contact-Us {
@@ -515,7 +795,7 @@ th {
   max-width: 1086px;
   width: 100%;
   text-align: center;
-  height: 240px;
+  /* height: 240px; */
   font-family: Nunito Sans;
   font-size: 14px;
   font-weight: 400;
@@ -586,6 +866,7 @@ th {
   #Second-panel .left,
   #Second-panel .right .account-logo {
     display: none;
+    z-index: 2;
   }
 
   #Second-panel .right .mobile-container {
@@ -627,6 +908,7 @@ th {
     width: 100%;
     padding: 117px 0 190px;
   }
+
 
   #Second-panel .books-content {
     width: 100%;
