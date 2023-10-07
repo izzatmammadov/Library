@@ -21,3 +21,10 @@ const imgUrlInput = document.querySelector("#imgUrlInput");
 
 const booksDetailTable = document.querySelector(".booksDetailTable");
 const contactDetailTable = document.querySelector(".contactDetailTable");
+const loginUsername = document.querySelector("#loginUsername");
+const loginPassword = document.querySelector("#loginPassword");
+const loginJoinBtn = document.querySelector("#loginJoinBtn");
+const secondPanel = document.querySelector("#Second-panel");
+const firstLogin = document.querySelector(".First-login");
+const logOutBtn = document.querySelector("#logOutBtn");
+const alert = document.querySelector(".alert");
