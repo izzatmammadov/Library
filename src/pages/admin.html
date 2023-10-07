@@ -25,8 +25,12 @@
   </head>
 
   <body>
-    <div class="First-login" style="display: none">
+    <div class="First-login" >
+   
       <header>
+        <div class="alert alert-danger" role="alert">
+         Error: wrong username or password
+        </div>
         <div id="header_admin_logo">
           <img src="../assets/photos/logo-white.svg" alt="logo" width="282px" />
           <!-- <img src="./img/book-white-logo.svg" alt="logo">
@@ -42,15 +46,15 @@
         <div class="login-container">
           <div class="form">
             <p>Welcome Admin</p>
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
-            <button>Join</button>
+            <input type="text" id="loginUsername" placeholder="Username" />
+            <input type="password" id="loginPassword" placeholder="Password" />
+            <button id="loginJoinBtn">Join</button>
           </div>
         </div>
       </section>
     </div>
 
-    <section id="Second-panel">
+    <section id="Second-panel" class="d-none">
       <section class="left">
         <aside>
           <div id="second_admin_logo">
@@ -142,7 +146,7 @@
               </li>
               <li>
                 <img src="../assets/photos/book-white-logo.svg" alt="book" />
-                <a href="#">Logout</a>
+                <a id="logOutBtn" href="#">Logout</a>
               </li>
             </ul>
           </div>
@@ -409,5 +413,6 @@
     <script src="../js/adminDropDown.js"></script>
     <script src="../js/admin_api.js"></script>
     <script type="module" src="../js/adminFirebase.js"></script>
+    <script type="module" src="../js/login.js"></script>
   </body>
 </html>
