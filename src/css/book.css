@@ -44,6 +44,7 @@ body {
     width: 60%;
     && .bookInfo {
       margin-bottom: 122px;
+
       && .bookYear {
         background: #2f80ed;
         color: #fff;

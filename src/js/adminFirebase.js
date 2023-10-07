@@ -31,8 +31,10 @@ const aboutSite = ref(db, "aboutSite");
 const users = ref(db, "users");
 const contacts = ref(db, "contacts");
 
-let date=new Date();
-let addedTime=`${date.getFullYear()}-${date.getMonth()<10?"0"+date.getMonth():date.getMonth()}-${date.getDay()<10?"0"+date.getDay():date.getDay()}`
+let date = new Date();
+let addedTime = `${date.getFullYear()}-${
+  date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()
+}-${date.getDay() < 10 ? "0" + date.getDay() : date.getDay()}`;
 console.log(addedTime);
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -45,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
       bookId: id,
       isNew: isNew.checked,
       bookType: admin_dropdown_active_item.innerText,
-      bookPublishDate:globalBookDetail.volumeInfo.publishedDate,
-      addedTime:addedTime,
+      bookPublishDate: globalBookDetail.volumeInfo.publishedDate,
+      addedTime: addedTime,
     };
 
     categoriesSorter(admin_dropdown_active_item.innerText);
@@ -60,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     bookDescInput.value = "";
     admin_dropdown_active_item.innerText = "";
   });
+
   siteInfoAddBtn.addEventListener("click", function () {
     let siteInfo = {
       siteTitle: siteTitle.value,
@@ -89,10 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .join(" ");
 
-      // console.log(arr);
     });
   }
   joinUsRender();
+
   function renderBooksDetail() {
     onValue(books, (snapshot) => {
       const data = snapshot.val();
@@ -103,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
       booksDetailTable.classList.remove("d-none");
 
       let arr = Object.entries(data);
-      // console.log(arr);
 
       booksDetailTable.innerHTML = arr
         .map((item, index) => {
@@ -134,8 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .join(" ");
 
-      // console.log(arr);
-
       const bookDelButton = document.querySelectorAll(".del");
       bookDelButton.forEach((btn) => {
         btn.addEventListener("click", function () {
@@ -156,7 +156,6 @@ function renderContacts() {
   onValue(contacts, (snapshot) => {
     const data = snapshot.val();
     let contactsArr = Object.entries(data);
-    // console.log(contactsArr);
     contactDetailTable.innerHTML = contactsArr.map((item, index) => {
       return ` <tr>
   <td>${index + 1}</td>
@@ -181,31 +180,20 @@ function categoriesDropDownRender() {
         </div>`;
       })
       .join("");
-     
-      const admin_dropdown_item=document.querySelectorAll(".admin_dropdown_item");
-      admin_dropdown_item.forEach((item) =>
-        item.addEventListener("click", function () {
-          admin_dropdown_active_item.innerHTML = item.innerText;
-          admin_dropdown_item_main.classList.remove("active");
-        })
-      );
+
+    const admin_dropdown_item = document.querySelectorAll(
+      ".admin_dropdown_item"
+    );
+    admin_dropdown_item.forEach((item) =>
+      item.addEventListener("click", function () {
+        admin_dropdown_active_item.innerHTML = item.innerText;
+        admin_dropdown_item_main.classList.remove("active");
+      })
+    );
   });
 }
 
 categoriesDropDownRender();
-
-
-
-  // let admin_dropdown_item = document.querySelectorAll(".admin_dropdown_item");
-  // console.log(admin_dropdown_item);
-
-
-
-
-
-
-
-
 
 function categoriesSorter(categories) {
   let arr = [];

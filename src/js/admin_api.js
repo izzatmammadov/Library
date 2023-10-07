@@ -1,13 +1,12 @@
 // https://www.googleapis.com/books/v1/volumes?q=qaraqan
 
-
-
 searchBtn.addEventListener("click", async function () {
   let bookName = searchInput.value;
   searchInput.value = "";
   let bookData = await getBooks(bookName);
   renderSearchResults(bookData);
 });
+
 let id;
 
 async function getBooks(bookName) {
@@ -25,7 +24,6 @@ async function getBooks(bookName) {
 async function renderSearchResults(bookData) {
   console.log(bookData.items);
   if (bookData.items === undefined) {
-    // alert("Please enter a valid book name!");
     document.querySelector(".alert").classList.add("alertActive");
     setTimeout(function () {
       document.querySelector(".alert").classList.remove("alertActive");
@@ -52,13 +50,6 @@ async function renderSearchResults(bookData) {
   searchHistory.classList.remove("d-none");
   searchHistory.innerHTML = renderData.join("");
 }
-// function with then();
-// function getBookDetail(bookId) {
-//   console.log(bookId);
-//   fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}`)
-//     .then((response) => response.json())
-//     .then((detail) => console.log(detail));
-// }
 
 function upperCase(str) {
   return str[0].toUpperCase() + str.slice(1);
@@ -75,7 +66,7 @@ async function getBookDetail(bookId) {
     `https://www.googleapis.com/books/v1/volumes/${bookId}`
   );
   let bookDetail = await res.json();
-globalBookDetail=bookDetail
+  globalBookDetail = bookDetail;
   bookNameInput.value =
     bookDetail.volumeInfo?.title == undefined
       ? " "
