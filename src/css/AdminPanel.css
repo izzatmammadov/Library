@@ -214,10 +214,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8.26px;
-  /* position: absolute;
-  right: 58px;
-  top: 60px;
-  margin-bottom: 50px; */
+
 }
 
 .admin-container {
