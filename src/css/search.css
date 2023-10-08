@@ -94,12 +94,17 @@ body {
   font-weight: 400;
   font-family: var(--fontMons);
 }
-
+::-webkit-scrollbar {
+  width: 2px;
+}
 .title {
   width: 95%;
   font-size: 12px;
   font-family: var(--fontMons);
   line-height: 196%;
+  height: 200px;
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
 .book_title {
@@ -118,7 +123,29 @@ body {
 .book1 {
   width: 55%;
 }
+.alert{
+height: 70px;
+text-align: center;
 
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 25%;
+position: fixed;
+z-index: 5;
+transition: all 0.5s;
+left: 50%;
+top: -100%;
+background-color: #34181a;
+border-radius: 6px;
+color: #f2d7da;
+}
+.alert_active{
+  top: 15%;
+  left: 50%;
+ 
+}
 @media only screen and (max-width: 600px) {
   .swiper {
     width: 100%;
