@@ -44,6 +44,11 @@ body {
   color: #ffff;
 }
 
+#Login {
+  background: var(--mainColorRed);
+  padding:0px 25px 140px;
+}
+
 #Login .login-container {
   max-width: 662px;
   width: 100%;
@@ -837,14 +842,16 @@ td{
   }
 
   #Login .login-container {
-    max-width: 229.72px;
+    max-width: 380px;
     width: 100%;
     padding: 27px 18.55px 50.26px;
   }
 
   #Login .login-container .form p {
     font-size: 20px;
-    width: 152px;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 20px;
     margin: 0 auto 26px;
   }
   #Login .login-container .form input {
