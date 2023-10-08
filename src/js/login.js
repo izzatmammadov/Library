@@ -65,8 +65,13 @@ if(localStorage.getItem("adminData")){
 secondPanel.classList.remove("d-none");
 
 }
-logOutBtn.addEventListener("click",function(){
+logOutBtn1.addEventListener("click",function(){
     secondPanel.classList.add("d-none");
     firstLogin.classList.remove("d-none");
     localStorage.removeItem("adminData");
+});
+logOutBtn2.addEventListener("click",function(){
+  secondPanel.classList.add("d-none");
+  firstLogin.classList.remove("d-none");
+  localStorage.removeItem("adminData");
 });

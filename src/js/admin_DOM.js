@@ -26,5 +26,7 @@ const loginPassword = document.querySelector("#loginPassword");
 const loginJoinBtn = document.querySelector("#loginJoinBtn");
 const secondPanel = document.querySelector("#Second-panel");
 const firstLogin = document.querySelector(".First-login");
-const logOutBtn = document.querySelector("#logOutBtn");
+const logOutBtn1 = document.querySelector("#logOutBtn1");
+const logOutBtn2 = document.querySelector("#logOutBtn2");
+
 const alert = document.querySelector(".alert");

@@ -71,26 +71,7 @@ body {
   }
 }
 
-.sections {
-  position: relative;
-}
 
-.arrows {
-  position: absolute;
-  top: 60%;
-  left: 7%;
-  display: flex;
-  width: 85%;
-  justify-content: space-between;
-}
-
-.arrows img {
-cursor: pointer;
-}
-
-.slider-1 {
-  padding: 20px 0px;
-}
 
 .slider_main_card {
   padding: 10px;
@@ -204,7 +185,7 @@ cursor: pointer;
       justify-content: start;
       align-items: start;
     }
-    .arrows {
+    .swiper-button-prev,.swiper-button-next {
       display: none;
     }
     .slider-catagories {
@@ -226,3 +207,4 @@ cursor: pointer;
     width: 100%;
   }
 }
+
