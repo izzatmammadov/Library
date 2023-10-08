@@ -99,7 +99,7 @@ swiperWrapper.innerHTML=newBooksArr.map((item)=>{
       <div class="book1">
         <img
           class="book"
-          src="../assets/photos/book_1.svg"
+          src="${item[1].bookImageUrl}"
           alt="book"
         />
       </div>
