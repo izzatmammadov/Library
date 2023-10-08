@@ -4,14 +4,15 @@ body {
 
 .First-login {
   background-color: var(--mainColorRed);
-  padding-bottom: 695px;
+  height: 100vh;
 }
 
 #header_admin_logo {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 85px 0 129px 32px;
+  padding: 45px 35px 0px;
+  margin-bottom: 120px;
 }
 
 .logo-content {
@@ -47,8 +48,8 @@ body {
   max-width: 662px;
   width: 100%;
   background-color: #ffff;
-  padding: 70px 54px 34px;
-  margin: 0 auto;
+  padding: 20px 54px 34px;
+  margin: 0px auto;
 }
 
 #Login .login-container .form p {
@@ -56,7 +57,7 @@ body {
   font-size: 44px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 26px;
+  padding: 26px;
   color: #000000;
 }
 
@@ -66,6 +67,7 @@ body {
 }
 
 #Login .login-container .form input {
+  font-family: var(--fontMons);
   height: 74.54px;
   margin-bottom: 34px;
   border: 1px solid #cecece;
@@ -74,18 +76,17 @@ body {
 }
 
 #Login .login-container .form input::placeholder {
-  font-family: Crimson Text;
+  font-family: var(--fontMons);
   font-size: 19px;
   font-weight: 400;
   line-height: 25px;
-  text-align: left;
 }
 
 #Login .login-container .form button {
   border: 1px solid #cecece;
   background-color: #e16a00;
   padding: 22px 0;
-  font-family: Crimson Text;
+  font-family: var(--fontMons);
   font-size: 19px;
   font-weight: 700;
   line-height: 25px;
@@ -206,7 +207,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 60px 58px 0 0;
+  padding: 60px 58px;
   cursor: pointer;
 }
 
@@ -384,7 +385,9 @@ body {
   z-index: 5;
   position: fixed;
   top: -100%;
-  transition: all 1s;
+  right: 5%;
+  transition: all .4s;
+  font-weight: 600;
 }
 .alertActive {
   top: 5%;
@@ -467,7 +470,7 @@ body {
 }
 
 .add_book_type {
-  color: green;
+  color: rgb(0, 255, 0);
   background: none;
   border: 0;
   margin-left: 10px;
@@ -508,6 +511,12 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+#imgUrlInput {
+  overflow: hidden;
+  width: 116px;
+  padding-left: 4px;
 }
 
 .admin_form_input::placeholder {
@@ -619,6 +628,7 @@ body {
   border: 1px solid #e2e6ee;
   box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
 }
+
 .del {
   border: none;
   background: transparent;
@@ -654,7 +664,7 @@ p {
   margin-bottom: 18px;
 }
 
-#Second-panel .join-us-table table {
+.join-us-table table {
   max-width: 512px;
   width: 100%;
   height: 258px;
@@ -669,9 +679,7 @@ p {
   
 }
 .join-us-table tbody {
-  width: 100%;
-
- 
+  width: 100%; 
 }
 
 
@@ -697,8 +705,6 @@ th {
 td{
   overflow-x: scroll;
   max-width: 199px;
- 
-
 }
 
 #Second-panel .join-us-table table th {
@@ -875,7 +881,7 @@ td{
   } */
 
   #Second-panel .right {
-    padding: 0 7px 0 16px;
+    padding: 0px 7px;
   }
 
   .admin-container {

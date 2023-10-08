@@ -61,9 +61,20 @@ main {
   .section-1 {
     width: 89%;
   }
+
+  .img-content{
+    width: 50%;
+    padding: 0px;
+  }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) and (min-width: 320px) {
   .section-1 {
     width: 100%;
   }
+
+  .img-content{
+    width: 60%;
+    padding: 0px;
+  }
+  
 }
