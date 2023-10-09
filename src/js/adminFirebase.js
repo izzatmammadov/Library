@@ -33,7 +33,7 @@ const contacts = ref(db, "contacts");
 
 let date = new Date();
 let addedTime = `${date.getFullYear()}-${
-  date.getMonth()+1 < 10 ? "0" + date.getMonth() : date.getMonth()
+  date.getMonth()+1 < 10 ? "0" + date.getMonth() : date.getMonth()+1
 }-${date.getDay() < 10 ? "0" + date.getDay() : date.getDay()}`;
 console.log(addedTime);
 
