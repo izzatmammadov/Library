@@ -33,7 +33,6 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: auto;
     text-overflow: ellipsis;
     font-family: var(--fontMons);
     font-weight: 400 !important;
@@ -157,6 +156,33 @@ body {
 .best-seller {
   margin-bottom: 50px;
 }
+.admin_slider_class.no_active .swiper{
+  width: 100% !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  justify-content: space-between !important;
+}
+
+.admin_slider_class.no_active .swiper-wrapper{
+  width: 99% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  transform: none !important;
+}
+.admin_slider_class.no_active .swiper-slide{
+  width: fit-content !important;
+}
+
+
+
+.admin_slider_class.no_active .swiper-button-prev{
+  display: none !important;
+}
+
+.admin_slider_class.no_active .swiper-button-next{
+  display: none !important;
+}
+
 
 @media screen and (max-width: 1201px) {
   .sections {
