@@ -179,6 +179,33 @@ function renderBookDetail(booksId) {
     }
     renderComments()
 
+
+
+// More Details
+let bookDetailsHeight = bookDetails.style.maxHeight;
+bookDetailsHeight = "262px";
+if (bookDetails.clientHeight < 262) {
+  moreDetails.style.display = "none";
+} else {
+  if (bookDetailsHeight) {
+    moreDetails.textContent = "Show More";
+  } else {
+    moreDetails.textContent = "Show Less";
+  }
+}
+moreDetails.addEventListener("click", function () {
+  if (bookDetails.style.maxHeight) {
+    bookDetails.style.maxHeight = null;
+    moreDetails.textContent = "Show More";
+  } else {
+    bookDetails.style.maxHeight = bookDetails.scrollHeight + "px";
+    moreDetails.textContent = "Show Less";
+  }
+});
+
+
+
+
   });
 }
 
