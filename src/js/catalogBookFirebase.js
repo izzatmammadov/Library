@@ -27,6 +27,8 @@ const db = getDatabase(app);
 const books = ref(db, "books");
 const catalogs = ref(db, "catalogs");
 
+
+
 let globalBooksArr;
 // const mainSection=document.querySelector(".mainSection");
 // const bookDetailPage=document.querySelector(".bookDetailPage")
@@ -48,10 +50,16 @@ function catalogRender() {
     slider_catagories.innerHTML = catalogItem;
 
     const catalogTypeBtn = document.querySelectorAll(".catalogTypeBtn");
-    console.log(catalogTypeBtn);
+    // console.log(catalogTypeBtn);
     catalogTypeBtn.forEach((element) => {
       element.addEventListener("click", () => {
-        sort(globalBooksArr, element.innerText);
+        sort(globalBooksArr, element.innerText)
+        element.addEventListener("click", function () {
+          catalogTypeBtn .forEach((btn) => {
+            btn.style.color = "";
+          });
+          element.style.color = "#e16a00";
+        });
       });
     });
   });
@@ -60,8 +68,51 @@ function catalogRender() {
 catalogRender();
 
 const sliderCard = document.querySelector(".first-slider");
+
 function detailRender() {
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1 ,
+    grid: {
+      rows: 1,
+    },
+  
+    breakpoints: {
+      
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+        1280: {
+            slidesPerView: 4,
+          },
+          1300: {
+            slidesPerView: 5,
+          },
+      },
+    
+    mousewheel: {
+      forceToAxis: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  
+  });
+
+
+
+
   onValue(books, (snapshot) => {
+
     const bookData = snapshot.val();
     let bookDataToArr = Object.entries(bookData);
     globalBooksArr = bookDataToArr;
@@ -106,6 +157,48 @@ function detailRender() {
 
 detailRender();
 function sort(arr, type) {
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1 ,
+    grid: {
+      rows: 1,
+    },
+  
+    breakpoints: {
+      
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+        1280: {
+            slidesPerView: 4,
+          },
+          1300: {
+            slidesPerView: 5,
+          },
+      },
+    
+    mousewheel: {
+      forceToAxis: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  
+  });
+
+
+
+
+
   if (type == "All") {
     sliderCard.innerHTML = arr
       .map((item) => {
@@ -256,116 +349,3 @@ detailRenderNewsSlider();
 function renderDetailPage(id) {
   window.location.href = `../pages/book.html#id=${id}`;
 }
-
-// function renderDetailPage(booksId){
-// console.log(booksId);
-// onValue(books, (snapshot) => {
-//   const data = snapshot.val();
-//   let newArr=Object.entries(data)
-//  console.log(newArr);
-// newArr.forEach((item) => {
-//   let bookYear=item[1].bookPublishDate.split("-")[0]
-//   const today = new Date();
-//   const year = today.getFullYear();
-//   const month = String(today.getMonth() + 1)<10?"0"+String(today.getMonth() + 1):String(today.getMonth() + 1);
-//   // console.log(month);
-//   const day = String(today.getDate())<10?"0"+String(today.getDate()):String(today.getDate());
-//   // console.log(day);
-//   const formattedDate = `${year}-${month}-${day}`;
-
-//   // console.log(formattedDate);
-
-// // console.log(formattedDate);
-// console.log(item[1].addedTime);
-//   let dateDifference=calculateDateDifference(item[1].addedTime, formattedDate);
-//   // console.log(bookYear);
-//   if (item[0]==booksId){
-// mainSection.classList.add("d-none")
-// bookDetailPage.classList.remove("d-none")
-// bookDetailPage.innerHTML=` <div class="bookAbout">
-// <div class="container">
-//   <button id="backBtn" class="btnBack">
-//     <i class="fa-solid fa-angle-left"></i> back
-//   </button>
-//   <div class="box d-flex justify-content-between">
-//     <div class="bookProduct">
-//       <div class="bookInfo"> <!--firebase info-->
-//         <p class="bookYear">${bookYear}</p>
-//         <h2 class="bookName">${item[1].bookTitle}</h2>
-//         <p class="bookDateOfAdded">${dateDifference}  ago added</p>
-//         <h3 class="authorSName">${item[1].authorName}</h3>
-//         <p class="bookDetails">
-//           ${item[1].bookDesc}
-//         </p>
-//         <button class="moreDetails"></button>
-//       </div>
-//       <div class="bookComment">
-//         <form action="">
-//           <div class="form">
-//             <input
-//               class="anonimComment"
-//               type="text"
-//               placeholder="Your anonim comment..."
-//             />
-//             <button class="commentAdd">
-//               <img
-//                 class="commentAddIcon"
-//                 src="../assets/photos/send.svg"
-//                 alt=""
-//               />
-//             </button>
-//             <p id="commentErrorMessage">Fill in the fields corectly!</p>
-
-//             <div class="errorBox"></div>
-//             <div class="userComment">
-//               <ul class="userCommentUl"></ul>
-//             </div>
-//           </div>
-//         </form>
-//       </div>
-//     </div>
-//     <div class="bookImg">
-//       <img
-//         class="book"
-//         src="${item[1].bookImageUrl}"
-//         alt=""
-//       />
-//      ${item[1].isNew===true? `<span class="new">new</span>`:""}
-//     </div>
-//   </div>
-// </div>
-// </div>`
-
-// }})
-// const backBtn=document.querySelector("#backBtn")
-// backBtn.addEventListener("click",function(){
-//   mainSection.classList.remove("d-none")
-// bookDetailPage.classList.add("d-none")
-// location.reload()
-// })
-// });
-// }
-// function calculateDateDifference(date1, date2) {
-
-//   const startDate = new Date(date1);
-//   const endDate = new Date(date2);
-
-//   const timeDifference = endDate - startDate;
-
-//   const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-
-//   if (daysDifference >= 30) {
-//     if (daysDifference >= 365) {
-
-//       const yearsDifference = Math.floor(daysDifference / 365);
-//       return `${yearsDifference}years`; ;
-//     } else {
-
-//       const monthsDifference = Math.floor(daysDifference / 30);
-//       return `${monthsDifference}months`;
-//     }
-//   } else {
-
-//     return daysDifference;
-//   }
-// }
