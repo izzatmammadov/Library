@@ -132,8 +132,7 @@ function renderBookDetail(booksId) {
       // console.log(backBtn);
     });
 
-    commentAdd.addEventListener("click",function () {
-      renderComments();  
+    commentAdd.addEventListener("click", async function () {
       if (commentInput.value.trim() == "") {
         commentErrorMessage.style.display = "block";
         setTimeout(() => {
@@ -152,7 +151,8 @@ function renderBookDetail(booksId) {
         bookId: currentId,
       };
       commentInput.value = "";
-      post(commentData);
+      await post(commentData);
+      renderComments();  
   
     });
 
