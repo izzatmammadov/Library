@@ -124,7 +124,7 @@ body {
   width: 55%;
 }
 .alert{
-height: 70px;
+height: 45px;
 text-align: center;
 
 font-size: 18px;
@@ -142,13 +142,22 @@ border-radius: 6px;
 color: #f2d7da;
 }
 .alert_active{
-  top: 15%;
-  left: 50%;
+  top: 18%;
+  left: 66.5%;
  
 }
 @media only screen and (max-width: 600px) {
   .swiper {
     width: 100%;
+  }
+
+  .alert {
+    width: 80%;
+  }
+
+  .alert_active {
+    top: 15%;
+    left: 11.5%;
   }
 
   .main {
@@ -245,6 +254,15 @@ color: #f2d7da;
   .swiper-slide {
     width: 100%;
     padding: 0px;
+  }
+
+  .alert {
+    width: 80%;
+  }
+
+  .alert_active {
+    top: 16.5%;
+    left: 11.5%;
   }
 
   .container {
