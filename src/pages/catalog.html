@@ -31,6 +31,7 @@
     />
     <!-- Catalog Css -->
     <link rel="stylesheet" href="../css/catalog.css" />
+    <link rel="stylesheet" href="../css/book.css">
     <link rel="icon" href="../assets/photos/logo_red.svg" type="image/x-icon" />
 
     <title>Catalog</title>
@@ -99,8 +100,90 @@
       </div>
     </header>
 
-    <main class="w-100">
-      <section class="sections section-1 w-100 catalog_main_section">
+<div class="bookDetailPage w-100 d-none">
+  <div class="bookAbout ">
+    <div class="container">
+      <button id="backBtn" class="btnBack">
+        <i class="fa-solid fa-angle-left"></i> back
+      </button>
+      <div class="box d-flex justify-content-between">
+        <div class="bookProduct">
+          <div class="bookInfo"> <!--firebase info-->
+            <p class="bookYear">2017</p>
+            <h2 class="bookName">Order in Chaos</h2>
+            <p class="bookDateOfAdded">2 days ago added</p>
+            <h3 class="authorSName">Konstantin Koptelov</h3>
+            <p class="bookDetails">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
+              placeat dicta voluptatem magni odit beatae id quasi eius quod
+              suscipit, tempore dolorem autem itaque mollitia modi nisi
+              corrupti accusantium maiores saepe aliquam pariatur sed veniam
+              illum! Est, doloremque animi harum quas delectus repudiandae
+              quos ad debitis sequi. Nesciunt dicta voluptates quae laborum
+              repellendus fugiat ipsa maiores atque quibusdam! Possimus qui
+              quibusdam, vero enim magni ut sed quisquam facilis earum
+              suscipit, maiores veniam. Nisi soluta possimus, cum deleniti
+              cumque aspernatur iste ipsa. Laborum, recusandae aspernatur!
+              Perspiciatis doloremque reprehenderit laboriosam accusantium
+              aspernatur optio magni qui numquam id. Dicta officia velit,
+              libero similique placeat corporis repellendus ex quibusdam
+              voluptate nesciunt neque hic fuga ipsam? Velit error fugiat
+              delectus aut mollitia culpa possimus impedit distinctio numquam
+              non sunt quo, maxime laboriosam recusandae sint optio ipsam
+              consectetur quaerat labore. Corrupti blanditiis esse officiis ut
+              deleniti suscipit, eligendi aperiam dolores temporibus expedita
+              unde voluptatum voluptas placeat consequuntur, a vero cupiditate
+              laudantium maxime dignissimos illum facere ipsam, accusantium
+              nesciunt. Soluta corrupti minima quidem similique culpa, quam
+              deserunt, voluptatum consequuntur, quae fugiat sapiente
+              molestias amet tenetur quo ipsum reprehenderit eaque quos
+              magnam? Beatae quam suscipit expedita. Obcaecati amet odit
+              consequatur dolorem hic blanditiis deserunt corporis laborum!
+              Corrupti, voluptatem!
+            </p>
+            <button class="moreDetails"></button>
+          </div>
+          <div class="bookComment">
+            <form>
+              <div class="form">
+                <input
+                  class="anonimComment"
+                  type="text"
+                  placeholder="Your anonim comment..."
+                />
+                <button class="commentAdd">
+                  <img
+                    class="commentAddIcon"
+                    src="../assets/photos/send.svg"
+                    alt=""
+                  />
+                </button>
+                <p id="commentErrorMessage">Fill in the fields corectly!</p>
+
+                <div class="errorBox"></div>
+                <div class="userComment">
+                  <ul class="userCommentUl"></ul>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="bookImg"> 
+          <img
+            class="book"
+            src="../assets/photos/order_in_chaos.svg"
+            alt=""
+          />
+          <span class="new">new</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+    <main class="w-100 mainSection ">
+
+      <section class="sections section-1 w-100 catalog_main_section admin_slider_class">
         <div class="text-side">
           <h1>All Books</h1>
           <div class="slider-catagories">
@@ -110,7 +193,7 @@
         <!-- Slider main container -->
         <div class="swiper">
           <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper first-slider">
             <!-- Slides -->
 
             <!-- <div class="swiper-slide">
@@ -150,12 +233,12 @@
         <div>
           <h1 class="w-100 text-center best-seller">Bestseller</h1>
         </div>
-        <div class="swiper">
+        <div class="swiper" >
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper second-slider" >
               <!-- Slides -->
   
-              <div class="swiper-slide">
+              <!-- <div class="swiper-slide">
                 <div class="slider_main_card">
                   <div class="slider-card">
                     <img
@@ -168,91 +251,8 @@
                     <button>Read more</button>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                  <div class="slider-card">
-                    <img
-                      class="books-img"
-                      src="../assets/photos/book_1.svg"
-                      alt=""
-                    />
-                    <p>Order in Chaos</p>
-                    <p>Konstantin Koptelov</p>
-                    <button>Read more</button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                  <div class="slider-card">
-                    <img
-                      class="books-img"
-                      src="../assets/photos/book_1.svg"
-                      alt=""
-                    />
-                    <p>Order in Chaos</p>
-                    <p>Konstantin Koptelov</p>
-                    <button>Read more</button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                  <div class="slider-card">
-                    <img
-                      class="books-img"
-                      src="../assets/photos/book_1.svg"
-                      alt=""
-                    />
-                    <p>Order in Chaos</p>
-                    <p>Konstantin Koptelov</p>
-                    <button>Read more</button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                  <div class="slider-card">
-                    <img
-                      class="books-img"
-                      src="../assets/photos/book_1.svg"
-                      alt=""
-                    />
-                    <p>Order in Chaos</p>
-                    <p>Konstantin Koptelov</p>
-                    <button>Read more</button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                  <div class="slider-card">
-                    <img
-                      class="books-img"
-                      src="../assets/photos/book_1.svg"
-                      alt=""
-                    />
-                    <p>Order in Chaos</p>
-                    <p>Konstantin Koptelov</p>
-                    <button>Read more</button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                  <div class="slider-card">
-                    <img
-                      class="books-img"
-                      src="../assets/photos/book_1.svg"
-                      alt=""
-                    />
-                    <p>Order in Chaos</p>
-                    <p>Konstantin Koptelov</p>
-                    <button>Read more</button>
-                  </div>
-                </div>
-              </div>
+              </div> -->
+          
   
             </div>
             <!-- If we need navigation buttons -->
@@ -279,100 +279,11 @@
           <h1 class="w-100 text-center new-releases">New releases</h1>
         </div>
        
-        <div class="swiper">
+        <div class="swiper"  >
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper sliderfornew" >
               <!-- Slides -->
   
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                    <div class="slider-card new-book">
-                      <img class="new-icon" src="../assets/icons/new-icon.svg" alt="" />
-                      <img class="books-img" src="../assets/photos/book_1.svg" alt="" />
-                      <p>Order in Chaos</p>
-                      <p>Konstantin Koptelov</p>
-                      <button>Read more</button>
-                    </div>
-                  </div>
-              </div>
-        
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                    <div class="slider-card new-book">
-                      <img class="new-icon" src="../assets/icons/new-icon.svg" alt="" />
-                      <img class="books-img" src="../assets/photos/book_1.svg" alt="" />
-                      <p>Order in Chaos</p>
-                      <p>Konstantin Koptelov</p>
-                      <button>Read more</button>
-                    </div>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                    <div class="slider-card new-book">
-                      <img class="new-icon" src="../assets/icons/new-icon.svg" alt="" />
-                      <img class="books-img" src="../assets/photos/book_1.svg" alt="" />
-                      <p>Order in Chaos</p>
-                      <p>Konstantin Koptelov</p>
-                      <button>Read more</button>
-                    </div>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                    <div class="slider-card new-book">
-                      <img class="new-icon" src="../assets/icons/new-icon.svg" alt="" />
-                      <img class="books-img" src="../assets/photos/book_1.svg" alt="" />
-                      <p>Order in Chaos</p>
-                      <p>Konstantin Koptelov</p>
-                      <button>Read more</button>
-                    </div>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                    <div class="slider-card new-book">
-                      <img class="new-icon" src="../assets/icons/new-icon.svg" alt="" />
-                      <img class="books-img" src="../assets/photos/book_1.svg" alt="" />
-                      <p>Order in Chaos</p>
-                      <p>Konstantin Koptelov</p>
-                      <button>Read more</button>
-                    </div>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                    <div class="slider-card new-book">
-                      <img class="new-icon" src="../assets/icons/new-icon.svg" alt="" />
-                      <img class="books-img" src="../assets/photos/book_1.svg" alt="" />
-                      <p>Order in Chaos</p>
-                      <p>Konstantin Koptelov</p>
-                      <button>Read more</button>
-                    </div>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                    <div class="slider-card new-book">
-                      <img class="new-icon" src="../assets/icons/new-icon.svg" alt="" />
-                      <img class="books-img" src="../assets/photos/book_1.svg" alt="" />
-                      <p>Order in Chaos</p>
-                      <p>Konstantin Koptelov</p>
-                      <button>Read more</button>
-                    </div>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider_main_card">
-                    <div class="slider-card new-book">
-                      <img class="new-icon" src="../assets/icons/new-icon.svg" alt="" />
-                      <img class="books-img" src="../assets/photos/book_1.svg" alt="" />
-                      <p>Order in Chaos</p>
-                      <p>Konstantin Koptelov</p>
-                      <button>Read more</button>
-                    </div>
-                  </div>
-              </div>
               
   
             </div>
@@ -466,12 +377,14 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- Catalog js -->
     <script src="../js/catalog.js"></script>
-    <script src="../js/newCatalog.js"></script>
     <!-- Join us -->
     <script src="../js/joinUs.js"></script>
     <!-- Join us module js -->
     <script type="module" src="../js/joinUsModule.js"></script>
+    
     <script type="module" src="../js/catalogBookFirebase.js"></script>
+    <script src="../js/book.js"></script>
+   
     <!-- <script type="module" src="../js/catalogPageFirebase.js"></script> -->
   </body>
 </html>

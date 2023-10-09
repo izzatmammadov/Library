@@ -22,13 +22,14 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const aboutSite = ref(db, "aboutSite");
 
-
-function aboutRender(){
-    let aboutContent = document.querySelector(".section-1")
-    onValue(aboutSite, (snapshot) => {
-        const aboutData = snapshot.val();
-               let aboutItem = [aboutData].map((item) => 
-            `<div class="text-content">
+function aboutRender() {
+  let aboutContent = document.querySelector(".section-1");
+  onValue(aboutSite, (snapshot) => {
+    const aboutData = snapshot.val();
+    let aboutItem = [aboutData]
+      .map(
+        (item) =>
+          `<div class="text-content">
           <h1>${item.siteTitle}</h1>
           <p>
           ${item.siteDesc}
@@ -38,8 +39,9 @@ function aboutRender(){
           <img class="img-fluid" src="${item.siteBookUrl}" alt="#aboutBook" />
         </div>
             `
-        ).join("")
-        aboutContent.innerHTML = aboutItem
-    });
+      )
+      .join("");
+    aboutContent.innerHTML = aboutItem;
+  });
 }
-aboutRender()
+aboutRender();

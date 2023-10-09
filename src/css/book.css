@@ -92,7 +92,7 @@ body {
     }
     && .bookComment {
       margin-top: 50px;
-      && form {
+      && .form {
         && .anonimComment {
           width: 70%;
           padding: 10px 20px;
@@ -183,7 +183,7 @@ body {
   }
   && .bookImg {
     position: relative;
-    /* width: 25%; */
+    width: 25%;
     && .book {
       width: 100%;
     }
@@ -204,10 +204,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-#commentErrorMessage {
-  margin: 10px auto;
-  width: 82%;
-}
+  #commentErrorMessage {
+    margin: 10px auto;
+    width: 82%;
+  }
 
   .box {
     flex-direction: column-reverse;
@@ -215,7 +215,7 @@ body {
     && .bookProduct {
       width: 100%;
       && .bookComment {
-        && form {
+        && .form {
           && .userComment {
             width: 90%;
             && .userCommentUl {
@@ -239,6 +239,7 @@ body {
     }
     && .bookImg {
       margin: 50px;
+      width: 80%;
     }
     && .bookImg {
       && .new {
@@ -265,7 +266,7 @@ body {
     }
     && .bookProduct {
       && .bookComment {
-        && form {
+        && .form {
           && .userComment {
             && .userCommentUl {
               margin-left: 30px;
@@ -281,6 +282,7 @@ body {
     width: 90%;
   }
   .box {
+    align-items: center;
     && .bookImg {
       && .new {
         font-size: 6px;
@@ -296,7 +298,7 @@ body {
         }
       }
       && .bookComment {
-        && form {
+        && .form {
           && .userComment {
             && .userCommentUl {
               margin-left: 20px;

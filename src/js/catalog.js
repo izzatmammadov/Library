@@ -8,11 +8,12 @@ options.forEach((element) => {
     element.style.color = "#e16a00";
   });
 });
-setTimeout(() => {const swiper = new Swiper('.swiper', {
+setTimeout(() => {
+  const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 1,
+    slidesPerView: 1 ,
     grid: {
       rows: 1,
     },
@@ -28,7 +29,7 @@ setTimeout(() => {const swiper = new Swiper('.swiper', {
         1280: {
             slidesPerView: 4,
           },
-          1440: {
+          1300: {
             slidesPerView: 5,
           },
       },
