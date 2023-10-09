@@ -20,7 +20,7 @@ body {
   display: none;
 }
 .bookAbout {
-  padding-top: 111px;
+  padding-top: 80px;
   && .btnBack {
     background: var(--mainColorOrange);
     color: #fff;
