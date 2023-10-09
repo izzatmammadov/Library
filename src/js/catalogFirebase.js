@@ -27,8 +27,7 @@ function catalogRender() {
   onValue(catalogs, (snapshot) => {
     const catalogData = snapshot.val();
     let catalogDataToArr = Object.entries(catalogData);
-    let catalogItem = catalogDataToArr
-    .map(
+    let catalogItem = catalogDataToArr.filter(item=> item[1].bookType!="All").map(
         (item) =>
           `
           <button>${item[1].bookType}</button>
