@@ -518,11 +518,7 @@ body {
   line-height: normal;
 }
 
-#imgUrlInput {
-  overflow: hidden;
-  width: 116px;
-  padding-left: 4px;
-}
+
 
 .admin_form_input::placeholder {
   color: #030102;
@@ -828,6 +824,7 @@ td{
 
 #left-first {
   display: none;
+  z-index: 3;
 }
 
 /* Responsive Design */
