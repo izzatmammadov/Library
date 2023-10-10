@@ -218,17 +218,19 @@ function calculateDateDifference(date1, date2) {
   const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
   if (daysDifference >= 30) {
-    if (daysDifference >= 365) {
-      const yearsDifference = Math.floor(daysDifference / 365);
-      return `${yearsDifference} years`;
+    const yearsDifference = Math.floor(daysDifference / 365);
+    const monthsDifference = Math.floor((daysDifference % 365) / 30);
+    
+    if (yearsDifference > 0) {
+      return `${yearsDifference} years and ${monthsDifference} months`;
     } else {
-      const monthsDifference = Math.floor(daysDifference / 30);
       return `${monthsDifference} months`;
     }
   } else {
     return `${daysDifference} days`;
   }
 }
+
 
 function formatTimestamp(timestamp) {
   const now = new Date();
